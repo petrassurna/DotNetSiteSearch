@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>USiteSearch</Title>
+    <Version>0.65-alpha</Version>
+    <Authors>Petras Surna</Authors>
+    <Company>Yart</Company>
+    <Description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</Description>
+    <PackageTags>Umbraco,website,search</PackageTags>
+    <PackageId>USiteSearch</PackageId>
+    <PackageOutputPath>C:\Yart\Clients and Jobs\DotNetSiteSearch\source\nuget</PackageOutputPath>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Copyright>Copyright Yart 2023</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>False</Optimize>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1701;1702;8602;8600;8604</NoWarn>	
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>$(DefineConstants)TRACE</DefineConstants>
+
+
+	
+	<DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1701;1702;8602;8600;8604</NoWarn>
+	
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="nuget.exe" />
+  </ItemGroup>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="10.3.1" />
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="10.3.1" />
+  </ItemGroup>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <ItemGroup>
+    <ProjectReference Include="..\LuceneSearch\LuceneSearch.csproj" />
+    <ProjectReference Include="..\Searchable\Searchable.csproj" />
+  </ItemGroup>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  <ItemGroup>
+    <None Update="images\umbraco-site-search.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

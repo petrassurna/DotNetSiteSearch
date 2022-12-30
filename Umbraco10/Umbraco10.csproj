@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	 <Version>0.65-alpha</Version>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms" Version="10.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
+    <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
+    <ProjectReference Include="..\USiteSearch\USiteSearch.csproj" />
+    <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <!-- Razor files are needed for the backoffice to work correctly -->
+    <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Remove RazorCompileOnBuild and RazorCompileOnPublish when not using ModelsMode InMemoryAuto -->
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)USiteSearch\README.md&quot; &quot;$(SolutionDir)&quot; /E /Y" />
+  </Target>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;$(SolutionDir)USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)\USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force&#xD;&#xA;&quot;$(SolutionDir)nuget\zip-file-frontend.bat&quot; &quot;0.651-alpha&quot;&#xD;&#xA;" />
+  </Target>
+
+</Project>

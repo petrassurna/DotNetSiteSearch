@@ -1,0 +1,137 @@
+$dns-search-bar-width: 1100px;
+$dns-search-div-background: #111;
+$dns-search-text-color: #ffffff;
+$dns-strong-color: #d3d3d3;
+$dns-search-overlay: rgba(0, 0, 0, 0.8);
+$dns-search-bar-padding: 20px;
+$dns-search-fields-height: 40px;
+
+
+.dns-search-bar {
+    padding: calc(#{$dns-search-bar-padding} + 10px);
+
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+    transition: top 0.7s;
+    width: $dns-search-bar-width;
+    background-color: $dns-search-div-background;
+    z-index: 1;
+
+    .dns-search-fields {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            width: 90%;
+            height: $dns-search-fields-height;
+
+            box-sizing: border-box;
+            padding-left: 10px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        #dns-search-loader {
+            display: none;
+            height: 35px;
+            width: 35px;
+        }
+    }
+
+    .dns-search-results {
+        display: none;
+        padding-top: 40px;
+        color: $dns-search-text-color;
+        overflow-y: scroll;
+        max-height: calc(100vh - 160px);
+
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px darkgrey;
+        }
+
+        &.show {
+            display: block;
+        }
+
+        .dns-search-result {
+            padding-bottom: 30px;
+
+            a.dns-heading {
+                font-size: 20px;
+                padding-bottom: 12px;
+                text-decoration: none;
+                color: $dns-search-text-color;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                padding-bottom: 3px;
+                font-size: 14px;
+
+                strong {
+                    font-style: italic;
+                    font-weight: bold;
+                }
+
+                &:last-of-type {
+                    padding-bottom: 10px;
+                }
+            }
+
+            a {
+                display: block;
+                color: #808080;
+                font-size: 14px;
+            }
+
+            &.no-result {
+                padding-bottom: 0px;
+
+                p {
+                    &:last-of-type {
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    #dns-search-skip {
+        display: none;
+        padding-left: 50px;
+    }
+
+    &.clicked {
+        top: 0px;
+        transition: top 0.7s;
+    }
+}
+
+#dns-search-overlay {
+    z-index: 0;
+    display: none;
+    background-color: $dns-search-overlay;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

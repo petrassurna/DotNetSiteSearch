@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<!-- Identifier that must be unique within the hosting gallery -->
+		<id>USiteSearch</id>
+
+		<!-- Package version number that is used when resolving dependencies -->
+		<version>0.651-alpha</version>
+
+		<!-- Authors contain text that appears directly on the gallery -->
+		<authors>Petras Surna</authors>
+
+		<!-- 
+            Owners are typically nuget.org identities that allow gallery
+            users to easily find other packages by the same owners.  
+        -->
+		<owners>Petras Surna</owners>
+
+		<!-- Project URL provides a link for the gallery -->
+		<projectUrl>https://github.com/petrassurna/dotnetsitesearch</projectUrl>
+
+		<!-- License information is displayed on the gallery -->
+		<license type="expression">AGPL-3.0-or-later</license>
+
+
+		<!-- Icon is used in Visual Studio's package manager UI -->
+		<icon>images\umbraco-site-search.jpeg</icon>
+
+		<!-- 
+            If true, this value prompts the user to accept the license when
+            installing the package. 
+        -->
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+
+		<!-- Any details about this particular release -->
+		<releaseNotes>Pre release - for testing only</releaseNotes>
+
+		<!-- 
+            The description can be used in package manager UI. Note that the
+            nuget.org gallery uses information you add in the portal. 
+        -->
+		<description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</description>
+
+		<!-- Copyright information -->
+		<copyright>Copyright ©2022-2023 Yart Pty Ltd</copyright>
+
+		<!-- Tags appear in the gallery and can be used for tag searches -->
+		<tags>Umbraco website search, Google-like site search, site search, website search</tags>
+
+		<!-- Dependencies are automatically installed when the package is installed -->
+		<dependencies>
+			<dependency id="PluralizeService.Core" version="1.2.21147.2" />
+		</dependencies>
+	
+		<!--
+		<contentFiles>
+			<files include="any/any/wwwroot/usitesearch/**" buildAction="Content"/>
+			<files include="any/any/Views/Partials/USiteSearch/**" buildAction="Content"/>
+		</contentFiles>
+		-->
+
+	</metadata>
+
+	<files>
+		<file src=".\images\umbraco-site-search.jpeg" target="images\" />
+			
+		<file src="..\README.md" target="content" />
+
+		<!--
+		
+		<file src="..\Umbraco10\wwwroot\USiteSearch\**" target="content/wwwroot/usitesearch"  />
+		<file src="..\Umbraco10\wwwroot\USiteSearch\**" target="contentFiles/any/any/wwwroot/usitesearch" />
+
+		<file src="..\Umbraco10\Views\Partials\USiteSearch\**" target="content/Views/Partials/usitesearch" />
+		<file src="..\Umbraco10\Views\Partials\USiteSearch\**" target="contentFiles/any/any/Views/Partials/usitesearch" />
+		
+		-->
+
+	</files>
+
+
+
+</package>
