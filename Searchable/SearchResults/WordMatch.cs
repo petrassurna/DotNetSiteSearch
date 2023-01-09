@@ -5,22 +5,24 @@ namespace Searchable.SearchResults
 {
   public class WordMatch
   {
+    public string SearchPhrase { get; set; }
+
+    public IStemmer Stemmer { get; set; } = null!;
+
+    public int WordsEachSide { get; set; }
+
     public AdjoiningWords WordsLeft { get; set; } = null!;
 
     public string Word { get; set; } = null!;
 
     public AdjoiningWords WordsRight { get; set; } = null!;
 
-    public IStemmer Stemmer { get; set; } = null!;
-
-    public int WordsEachSide { get; set; }
 
     public WordMatch(IStemmer stemmer, int wordsEachSide)
     {
       Stemmer= stemmer;
       WordsEachSide= wordsEachSide;
     }
-
 
     public bool Contains(string word) => 
       WordsLeft.Contains(word) || 
