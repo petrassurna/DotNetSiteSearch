@@ -17,5 +17,7 @@ del "C:\Program Files\7-Zip\7z.exe" a "C:\Yart\Clients and Jobs\dotnetsitesearch
 "C:\Program Files\7-Zip\7z.exe" d "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\nuget\USiteSearchProjectFiles-%version%.zip" Views\CreativeStudioPage.cshtml
 "C:\Program Files\7-Zip\7z.exe" d "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\nuget\USiteSearchProjectFiles-%version%.zip" Views\SimpleSiteMaster.cshtml
 "C:\Program Files\7-Zip\7z.exe" d "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\nuget\USiteSearchProjectFiles-%version%.zip" Views\SimpleSitePage.cshtml
+"C:\Program Files\7-Zip\7z.exe" d "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\nuget\USiteSearchProjectFiles-%version%.zip" Views\U11SampleSiteMaster.cshtml
+"C:\Program Files\7-Zip\7z.exe" d "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\nuget\USiteSearchProjectFiles-%version%.zip" Views\U11SampleSitePage.cshtml
 
 "C:\Yart\Clients and Jobs\DotNetSiteSearch\source\usitesearch\PostBuildActions\bin\Debug\net6.0\PostBuildActions.exe" %version%
