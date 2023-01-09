@@ -11,7 +11,7 @@ the search and syntax highlighting to make the results more readable.
 
 In the past, I have copied and pasted my site search code between projects, but this has not been 
 efficient and has resulted in bugs and other issues. To improve the quality of my code and make it easier to 
-use, I have decided to add tests and turn it into a system that can be easily installed in just 15 minutes. 
+use, I have decided to add unit and integration tests and turn it into a system that can be easily installed in just 15 minutes. 
 This system is called USiteSearch.
 
 Earlier versions of the code used in USiteSearch can be seen in action on the [Energy Council](https://www.energycouncil.com.au) 
@@ -44,11 +44,12 @@ The back office login for the website is:
 
 	```
 
-	dotnet add package USiteSearch --version 999.999
-	or update-package USiteSearch -999.999    (if replacing an older version)
+	dotnet add package USiteSearch --version 0.65-alpha
+	or update-package USiteSearch -0.65-alpha    (if replacing an older version)
 	```
 
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-999.999.zip
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip  
+   Unzip the files in the project folder.
 
 	This installs some css, images, javascript and a partial view
 

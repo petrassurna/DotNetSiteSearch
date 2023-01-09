@@ -15,11 +15,14 @@ if (Environment.GetCommandLineArgs().Length > 1)
 
 string folder = Path.GetDirectoryName(Environment.ProcessPath) ?? "";
 
-string path = $"{folder}\\..\\..\\..\\..\\USiteSearch\\";
-string template = $"{path}README-template.md";
+string pathToUSiteSearch = $"{folder}\\..\\..\\..\\..\\USiteSearch\\";
+string pathToSolution = $"{folder}\\..\\..\\..\\..\\";
+string template = $"{pathToUSiteSearch}README-template.md";
 
-Console.WriteLine(path);
+Console.WriteLine(pathToUSiteSearch);
 
 string contents = File.ReadAllText(template);
 
-File.WriteAllText($"{path}README.md", contents.Replace("VERSION", version));
+File.WriteAllText($"{pathToUSiteSearch}README.md", contents.Replace("VERSION", version));
+
+File.Copy($"{pathToUSiteSearch}README.md", $"{pathToSolution}README.md", true);

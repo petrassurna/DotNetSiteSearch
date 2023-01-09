@@ -18,3 +18,4 @@ echo on
 "C:\Yart\Clients and Jobs\DotNetSiteSearch\source\usitesearch\PostBuildActions\bin\Debug\net6.0\PostBuildActions.exe" %version%
 
 
+pause
