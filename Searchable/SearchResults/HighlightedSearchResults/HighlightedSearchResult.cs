@@ -15,18 +15,15 @@ namespace Searchable.SearchResults.HighlightedSearchResults
 
     public WordMatches ContentMatches { get; set; } = new();
 
-    private string SearchPhrase { get; set; }
-
     private IStemmer Stemmer { get; set; }
 
     private int WordsEachSide { get; set; }
 
-    public HighlightedSearchResult(IStemmer stemmer, int wordsEachSide, string searchPhrase)
+    public HighlightedSearchResult(IStemmer stemmer, int wordsEachSide)
     {
       Stemmer = stemmer;
       WordsEachSide = wordsEachSide;
       Title = new(Stemmer, WordsEachSide);
-      SearchPhrase = searchPhrase;
     }
 
   }

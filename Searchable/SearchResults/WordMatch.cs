@@ -31,7 +31,7 @@ namespace Searchable.SearchResults
 
     public string Highlight(string searchPharse)
     {
-      IEnumerable<string> words = searchPharse.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+      IEnumerable<string> words = Split(searchPharse);
 
       string str =  $"{WordsLeft.Highlight(words, Stemmer)} {Word.Highlight(words, Stemmer)} {WordsRight.Highlight(words, Stemmer)}".Trim();
 
@@ -47,6 +47,11 @@ namespace Searchable.SearchResults
 
       return str;
     }
+
+
+    private IEnumerable<string> Split(string searchPharse) => searchPharse.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    
+    public IEnumerable<string> NonMatchedWords(string searchPhrase) => Split(searchPhrase).Where(w => !Contains(w));
 
     public IEnumerable<string> NonMatchedWords(IEnumerable<string> words) => words.Where(w => !Contains(w));
 

@@ -10,14 +10,8 @@ namespace Searchable.SearchResults.Factories
     /// <summary>
     /// Returns a SearchResult where each word in query is highlighted at least once according to the follwoing criteria
     /// 
-    /// If all words in query are in the title, it returns the title and the first wordsEachSide words of the content 
-    /// whether they contain matches or not
-    /// 
-    /// If some words in query are in the title, it returns the title and WordMatches such that the total matches in the title
-    /// and WordMatches highlight all search terms
-    /// 
-    /// If no words in query are in the title or content, it returns the result "Error" as this shouldn't be possible
-    /// 
+    /// Matches all words in the title
+    /// And matches all words in the content at least once if they exist
     /// </summary>
     /// <param name="result"></param>
     /// <param name="searchPhrase">The search query</param>
@@ -27,19 +21,16 @@ namespace Searchable.SearchResults.Factories
 
     public static HighlightedSearchResult GetSearchResults(SearchResult result, string searchPhrase, int wordsEachSide, IStemmer stemmer)
     {
-      HighlightedSearchResult highlightedResult = new HighlightedSearchResult(stemmer, wordsEachSide, searchPhrase);
-      string[] terms = searchPhrase.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-      var titleMatch = TextToWordMatches.HighlightPhraseMatchInTitle(searchPhrase, result.Content.Field("Title").Value, stemmer);
-
-      highlightedResult.Title = TextToWordMatches
-        .HighlightPhraseMatchInContent(searchPhrase, result.Content.Field("Title").Value, 
-        10000000, //infinte words each side
-        stemmer)[0];
+      HighlightedSearchResult highlightedResult = new HighlightedSearchResult(stemmer, wordsEachSide);
 
       highlightedResult.Path = result.Content.Field("Url").Value;
       highlightedResult.Score = result.Score;
       highlightedResult.Id = result.Content.Field("Id").Value;
+
+      highlightedResult.Title = TextToWordMatches
+        .HighlightPhraseMatchInContent(searchPhrase, result.Content.Field("Title").Value,
+        10000000, //infinte words each side
+        stemmer)[0];
 
       highlightedResult.ContentMatches = TextToWordMatches
         .HighlightPhraseMatchInContent(searchPhrase, result.Content.Field("Text").Value, wordsEachSide, stemmer);
