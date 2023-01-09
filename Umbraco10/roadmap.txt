@@ -1,30 +1,19 @@
 ﻿How to build nuget packages
 ---------------------------
 
-1. Change USiteSearch/USiteSearch.nuspec version number:
+1. Change USiteSearch project properties 
+   -Package
+   -General 
+   - Package Version
 
-<version>0.652-alpha</version>
-
-2. In the project properties of Umbraco 10, change this post build event to the same version number
-
-"$(SolutionDir)nuget\zip-file-frontend.bat"          "0.652-alpha" <- this one
-
-3. In USiteSearch change these three lines in README.md
-
-	2. Install the nuget package USiteSearch via the NuGet package manager:
-
-		```
-
-		dotnet add package USiteSearch --version 0.652.0-alpha <- this one
-
-		update-package USiteSearch -0.652.0-alpha <- this one
-		```
-
-	3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.652-alpha.zip <- this one
+   to the latest version e.g. 0.6511-alpha
 
 
 Notes
 -----
+
+can't get posttbuild to work in USiteSearch
+"$(SolutionDir)PostBuildActions\bin\Debug\net6.0\PostBuildActions.exe" $(Version)
 
 Too much is highlighted on:
 

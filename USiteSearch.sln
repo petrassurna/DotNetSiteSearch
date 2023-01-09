@@ -24,6 +24,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchableTests", "Searchab
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "USiteSearch", "USiteSearch\USiteSearch.csproj", "{106DD9CF-DAD5-4122-A342-CAA735D97A21}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PostBuildActions", "PostBuildActions\PostBuildActions.csproj", "{A6C09BCC-40EF-43FE-BE63-CC5A49496819}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -62,6 +64,10 @@ Global
 		{106DD9CF-DAD5-4122-A342-CAA735D97A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{106DD9CF-DAD5-4122-A342-CAA735D97A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{106DD9CF-DAD5-4122-A342-CAA735D97A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C09BCC-40EF-43FE-BE63-CC5A49496819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C09BCC-40EF-43FE-BE63-CC5A49496819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C09BCC-40EF-43FE-BE63-CC5A49496819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C09BCC-40EF-43FE-BE63-CC5A49496819}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

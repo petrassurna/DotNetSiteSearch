@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-	 <Version>0.65-alpha</Version>
+	 <Version></Version>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
@@ -31,11 +31,11 @@
   </PropertyGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)USiteSearch\README.md&quot; &quot;$(SolutionDir)&quot; /E /Y" />
+    <Exec Command="xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y" />
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)\USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force&#xD;&#xA;&quot;$(SolutionDir)nuget\zip-file-frontend.bat&quot; &quot;0.652-alpha&quot;&#xD;&#xA;" />
+    <Exec Command="&quot;$(SolutionDir)USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)\USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force" />
   </Target>
 
 </Project>

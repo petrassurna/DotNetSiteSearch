@@ -23,8 +23,6 @@ namespace LuceneSearcn.Tests
     {
       Content content = ContentFactory.WebPage("1", "/url", "title", "content");
 
-      string contentRoot = TestConstants.PATH;
-
       using (ISearchProvider provider = new LuceneProvider(new RAMDirectory()))
       {
         try

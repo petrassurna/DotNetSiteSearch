@@ -44,11 +44,11 @@ The back office login for the website is:
 
 	```
 
-	dotnet add package USiteSearch --version 0.652.0-alpha
-	or update-package USiteSearch -0.652-alpha    (if replacing an older version)
+	dotnet add package USiteSearch --version 0.65-alpha
+	or update-package USiteSearch -0.65-alpha    (if replacing an older version)
 	```
 
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.652-alpha.zip
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip
 
 	This installs some css, images, javascript and a partial view
 
