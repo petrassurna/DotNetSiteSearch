@@ -5,7 +5,7 @@
 		<id>USiteSearch</id>
 
 		<!-- Package version number that is used when resolving dependencies -->
-		<version>0.651-alpha</version>
+		<version>0.652-alpha</version>
 
 		<!-- Authors contain text that appears directly on the gallery -->
 		<authors>Petras Surna</authors>

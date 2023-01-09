@@ -3,11 +3,11 @@
 
 1. Change USiteSearch/USiteSearch.nuspec version number:
 
-<version>0.65-alpha</version>
+<version>0.652-alpha</version>
 
 2. In the project properties of Umbraco 10, change this post build event to the same version number
 
-"$(SolutionDir)nuget\zip-file-frontend.bat"          "0.65-alpha" <- this one
+"$(SolutionDir)nuget\zip-file-frontend.bat"          "0.652-alpha" <- this one
 
 3. In USiteSearch change these three lines in README.md
 
@@ -15,13 +15,12 @@
 
 		```
 
-		dotnet add package USiteSearch --version 0.651.0-alpha <- this one
+		dotnet add package USiteSearch --version 0.652.0-alpha <- this one
 
-		update-package USiteSearch -0.651.0-alpha <- this one
+		update-package USiteSearch -0.652.0-alpha <- this one
 		```
 
-	3. Install USiteSearchProjectFiles-0.65-alpha.zip <- this one
-
+	3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.652-alpha.zip <- this one
 
 
 Notes
@@ -42,22 +41,10 @@ eukaryotic million body
 eukaryotic million aquatic
 
 
-highlighting algorithm should highlight in title and body
-and show first line of body if no match
-animals
-
 
 why you cant copy file nuget files to a folder
 https://stackoverflow.com/questions/51959638/nuget-package-contentfiles-not-copied-to-net-core-project
 
-
-
-
--U11
-
--documentation
-
--check
 
 -list on StackOverflow
 

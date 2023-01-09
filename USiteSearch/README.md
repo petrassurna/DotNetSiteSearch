@@ -14,7 +14,7 @@ efficient and has resulted in bugs and other issues. To improve the quality of m
 use, I have decided to add tests and turn it into a system that can be easily installed in just 15 minutes. 
 This system is called USiteSearch.
 
-Earlier 0.65-alphas of USiteSearch can be seen in action on the [Energy Council](https://www.energycouncil.com.au) 
+Earlier versions of the code used in USiteSearch can be seen in action on the [Energy Council](https://www.energycouncil.com.au) 
 and [Mysterious Universe](https://mysteriousuniverse.org/) (20,000 blog posts), 
 which have a total of 20,000 blog posts.
 
@@ -44,11 +44,11 @@ The back office login for the website is:
 
 	```
 
-	dotnet add package USiteSearch --version 0.651.0-alpha
-	or update-package USiteSearch -0.651-alpha    (if replacing an older version)
+	dotnet add package USiteSearch --version 0.652.0-alpha
+	or update-package USiteSearch -0.652-alpha    (if replacing an older version)
 	```
 
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.652-alpha.zip
 
 	This installs some css, images, javascript and a partial view
 
@@ -165,7 +165,7 @@ This has been done for you in *master.cshtml*
 	![app_data folder](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-animals.jpg)
 
 	Refine the search, search for *animals lions*. Note the results reduce and each search term is highlighted with 10 words either
-	side of the word match. This is the variable we set earlier in startup.cs.
+	side of the word match. This is the variable we set earlier in *startup.cs*.
 
 9. Search for the term *play close* and notice it matches all pages: 
 

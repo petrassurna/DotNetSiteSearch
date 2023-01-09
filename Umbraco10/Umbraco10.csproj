@@ -35,7 +35,7 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)\USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force&#xD;&#xA;&quot;$(SolutionDir)nuget\zip-file-frontend.bat&quot; &quot;0.651-alpha&quot;&#xD;&#xA;" />
+    <Exec Command="&quot;$(SolutionDir)USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)\USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force&#xD;&#xA;&quot;$(SolutionDir)nuget\zip-file-frontend.bat&quot; &quot;0.652-alpha&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

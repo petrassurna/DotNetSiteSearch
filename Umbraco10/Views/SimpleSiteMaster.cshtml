@@ -1,8 +1,10 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Page>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    Layout = null;
+  Layout = null;
 }
+
 
 <!doctype html>
 <html lang="en">
@@ -25,7 +27,7 @@
 
 <body>
 
-    @Html.Partial("~/Views/Partials/USiteSearch/site-search.cshtml")
+  @Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
 
     <section class="menu" usitesearch-exclude="true">
         <nav>
