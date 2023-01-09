@@ -171,9 +171,9 @@ function DNS_DrawSearchResult(data) {
 
     search_result.appendChild(heading);
 
-    for (var i = 0; i < data.wordMatches.length; i++) {
+    for (var i = 0; i < data.contentMatches.length; i++) {
         var paragraph = document.createElement('p');
-        paragraph.innerHTML = data.wordMatches[i];
+        paragraph.innerHTML = data.contentMatches[i];
         search_result.appendChild(paragraph);
     }
 
@@ -187,16 +187,12 @@ function DNS_DrawSearchResults(data, searchTerm) {
     var search_results = document.getElementById('dns-search-results');
 
     if (data.length > 0) {
-
         DNS_DeleteSearchResults();
         DNS_DrawSearchResultsDirect(data);
         DNS_SetSkip(DNS_GetSkip() + data.length);
-
     }
     else {
-
         DNS_DrawNoResults(searchTerm);
-
     }
 }
 
@@ -216,7 +212,6 @@ function DNS_DrawSearchResultsDirect(data) {
     search_results.classList.add('show');
 
     for (var i = 0; i < data.length; i++) {
-
         var result = DNS_DrawSearchResult(data[i]);
         search_results.appendChild(result);
 

@@ -1,5 +1,4 @@
 ﻿using Searchable.SearchableContent;
-using Searchable.SearchResults.HighlightedSearchResults;
 using Searchable.Stemming;
 
 namespace Searchable.SearchResults.Factories
@@ -19,9 +18,9 @@ namespace Searchable.SearchResults.Factories
     /// <param name="stemmer">The stemmer to use to identify a match</param>
     /// <returns></returns>
 
-    public static HighlightedSearchResult GetSearchResults(SearchResult result, string searchPhrase, int wordsEachSide, IStemmer stemmer)
+    public static UriSearchResult GetSearchResults(SearchResult result, string searchPhrase, int wordsEachSide, IStemmer stemmer)
     {
-      HighlightedSearchResult highlightedResult = new HighlightedSearchResult(searchPhrase, stemmer, wordsEachSide);
+      UriSearchResult highlightedResult = new UriSearchResult(searchPhrase, stemmer, wordsEachSide);
 
       highlightedResult.Path = result.Content.Field("Url").Value;
       highlightedResult.Score = result.Score;
