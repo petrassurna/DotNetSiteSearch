@@ -5,9 +5,9 @@
 
 <version>0.65-alpha</version>
 
-2. In the properties of Umbraco 10, change this post build event to the same version number
+2. In the project properties of Umbraco 10, change this post build event to the same version number
 
-"$(SolutionDir)nuget\zip-file-frontend.bat" "0.65-alpha"
+"$(SolutionDir)nuget\zip-file-frontend.bat"          "0.65-alpha" <- this one
 
 3. In USiteSearch change these three lines in README.md
 
@@ -15,12 +15,12 @@
 
 		```
 
-		dotnet add package USiteSearch --version 0.651.0-alpha
+		dotnet add package USiteSearch --version 0.651.0-alpha <- this one
 
-		update-package USiteSearch -0.651.0-alpha 
+		update-package USiteSearch -0.651.0-alpha <- this one
 		```
 
-	3. Install USiteSearchProjectFiles-0.65-alpha.zip
+	3. Install USiteSearchProjectFiles-0.65-alpha.zip <- this one
 
 
 

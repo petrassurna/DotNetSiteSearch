@@ -12,7 +12,7 @@ namespace Searchable.SearchResults.HighlightedSearchResults
 
         public string Title { get; set; } = null!;
 
-        public WordMatches WordMatches { get; set; } = new ();
+        public WordMatches ContentMatches { get; set; } = new ();
 
     }
 }

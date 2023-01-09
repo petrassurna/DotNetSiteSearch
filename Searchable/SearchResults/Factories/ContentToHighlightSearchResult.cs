@@ -50,9 +50,8 @@ namespace Searchable.SearchResults.Factories
             highlightedResult.Score = result.Score;
             highlightedResult.Id = result.Content.Field("Id").Value;
 
-      highlightedResult.WordMatches = TextToWordMatches
-        .HighlightPhraseMatchInContent(query, result.Content.Field("Text").Value, wordsEachSide, stemmer);
-         //     .Select(m => m.Highlight(terms, stemmer, m.WordsLeft.WordsRemainLeft, m.WordsRight.WordsRemainRight));
+            highlightedResult.ContentMatches = TextToWordMatches
+              .HighlightPhraseMatchInContent(query, result.Content.Field("Text").Value, wordsEachSide, stemmer);
 
             return highlightedResult;
         }

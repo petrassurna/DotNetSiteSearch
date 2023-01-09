@@ -20,9 +20,9 @@ namespace Searchable.SearchResults.Factories
 
       if (matches.Count() == 0)
       {
-        WordMatch match = new WordMatch()
+        WordMatch match = new WordMatch(stemmer, wordsEachSide)
         {
-          WordsLeft = new AdjoiningWords(),
+          WordsLeft = WordsBefore.Get(content, 0, wordsEachSide),
           Word = "",
           WordsRight = WordsAfter.Get(content, 0, wordsEachSide)
         };
@@ -37,7 +37,7 @@ namespace Searchable.SearchResults.Factories
     private static WordMatches HighlightPhraseMatchInContentDirect(string phrase, string content, int wordsEachSide, IStemmer stemmer)
     {
       string[] words = phrase.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-      WordMatches matches = new(words);
+      WordMatches matches = new(phrase);
 
       foreach (string word in words)
       {

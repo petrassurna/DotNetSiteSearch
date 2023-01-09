@@ -39,20 +39,6 @@ namespace Searchable.SearchResults
     public int Count() => WordList.Count();
 
 
-    public string Highlight(IStemmer stemmer)
-    {
-      string highlighted = "";
-
-      foreach (string word in WordList)
-      {
-        highlighted += word.Highlight(WordList, stemmer);
-      }
-
-      return highlighted;
-    }
-
-    public string Highlight(string word) => WordList.Highlight(word);
-
     public string Highlight(IEnumerable<string> wordsToHighlight, IStemmer stemmer)
     {
       return WordList.HighlightStemmed(wordsToHighlight, stemmer);

@@ -9,16 +9,15 @@ namespace Searchable.SearchResults
 {
   public class WordMatches : List<WordMatch>
   {
-    public string[] SearchTerms { get; set; }
+    public string SearchPhrase { get; set; } = null!;
 
     public WordMatches()
     {
-      SearchTerms = new string[0];
     }
 
-    public WordMatches(string[] searchTerms)
+    public WordMatches(string searchPhrase)
     {
-      SearchTerms = searchTerms;
+      SearchPhrase = searchPhrase;
     }
 
     public bool Contains(string word)
@@ -44,14 +43,12 @@ namespace Searchable.SearchResults
 
       foreach (var match in this)
       {
-        string str = match.Highlight(SearchTerms, stemmer, false, false);
+        string str = match.Highlight(SearchPhrase);
         parts.Add(str);
       }
 
       return parts;
     }
-
-    public string HighlightInOneLine(IStemmer stemmer) => String.Join(" ", Highlight(stemmer)).Trim();
 
 
   }

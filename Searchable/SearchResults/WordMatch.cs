@@ -11,27 +11,42 @@ namespace Searchable.SearchResults
 
     public AdjoiningWords WordsRight { get; set; } = null!;
 
+    public IStemmer Stemmer { get; set; } = null!;
+
+    public int WordsEachSide { get; set; }
+
+    public WordMatch(IStemmer stemmer, int wordsEachSide)
+    {
+      Stemmer= stemmer;
+      WordsEachSide= wordsEachSide;
+    }
+
+
     public bool Contains(string word) => 
       WordsLeft.Contains(word) || 
       Word.ToLower() == word.ToLower() || 
       WordsRight.Contains(word);
 
-    public string Highlight(IEnumerable<string> words, IStemmer stemmer, bool wordsLeft, bool wordsRight)
+    public string Highlight(string searchPharse)
     {
-      string str =  $"{WordsLeft.Highlight(words, stemmer)} {Word.Highlight(words, stemmer)} {WordsRight.Highlight(words, stemmer)}".Trim();
+      IEnumerable<string> words = searchPharse.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-      if (wordsLeft)
+      string str =  $"{WordsLeft.Highlight(words, Stemmer)} {Word.Highlight(words, Stemmer)} {WordsRight.Highlight(words, Stemmer)}".Trim();
+
+      if (WordsLeft.WordsRemainLeft)
       {
         str = "..." + str;
       }
 
-      if (wordsRight)
+      if (WordsRight.WordsRemainRight)
       {
         str += "...";
       }
 
       return str;
     }
+
+    public IEnumerable<string> NonMatchedWords(IEnumerable<string> words) => words.Where(w => !Contains(w));
 
   }
 }

@@ -21,7 +21,7 @@ namespace Searchable.SearchResults.Factories
 
       if (index != -1)
       {
-        match = new WordMatch();
+        match = new WordMatch(stemmer, wordsEachSide);
         match.WordsLeft = WordsBefore(contents, index, wordsEachSide);
         match.Word = contents[index];
         match.WordsRight = WordsAfter(contents, index, wordsEachSide);
@@ -45,7 +45,7 @@ namespace Searchable.SearchResults.Factories
         int start = index - wordsEachSide;
         int end = start + wordsEachSide;
 
-        if (start < 0)
+        if (start <= 0)
         {
           start = 0;
           end += start;

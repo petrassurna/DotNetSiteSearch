@@ -108,26 +108,26 @@ namespace SearchableTests
       var matches = TextToWordMatches.HighlightPhraseMatchInContent("dog", "I am a dog and a cat", 2, stemmer);
       matches.Highlight(stemmer).Count().ShouldBe(1);
       string str = matches.Highlight(stemmer).ToList()[0];
-      matches.Highlight(stemmer).ToList()[0].ShouldBe("am a <strong>dog</strong> and a");
+      matches.Highlight(stemmer).ToList()[0].ShouldBe("...am a <strong>dog</strong> and a...");
 
       matches = TextToWordMatches.HighlightPhraseMatchInContent("dog", "I am a Dog and a cat", 2, stemmer);
       matches.Highlight(stemmer).Count().ShouldBe(1);
       str = matches.Highlight(stemmer).ToList()[0];
-      matches.Highlight(stemmer).ToList()[0].ShouldBe("am a <strong>Dog</strong> and a");
+      matches.Highlight(stemmer).ToList()[0].ShouldBe("...am a <strong>Dog</strong> and a...");
 
       matches = TextToWordMatches.HighlightPhraseMatchInContent("dog", "I am a Dog and doG cat", 2, stemmer);
       var m = matches[0];
       matches.Highlight(stemmer).Count().ShouldBe(1);
       str = matches.Highlight(stemmer).ToList()[0];
-      matches.Highlight(stemmer).ToList()[0].ShouldBe("am a <strong>Dog</strong> and <strong>doG</strong>");
+      str.ShouldBe("...am a <strong>Dog</strong> and <strong>doG</strong>...");
 
       matches = TextToWordMatches.HighlightPhraseMatchInContent("dog cat", "I am a Dog and doG caT", 1, stemmer);
       m = matches[0];
       matches.Highlight(stemmer).Count().ShouldBe(2);
       str = matches.Highlight(stemmer).ToList()[0];
-      matches.Highlight(stemmer).ToList()[0].ShouldBe("a <strong>Dog</strong> and");
+      str.ShouldBe("...a <strong>Dog</strong> and...");
       str = matches.Highlight(stemmer).ToList()[1];
-      matches.Highlight(stemmer).ToList()[1].ShouldBe("<strong>doG</strong> <strong>caT</strong>");
+      str.ShouldBe("...<strong>doG</strong> <strong>caT</strong>");
     }
 
 
@@ -139,7 +139,7 @@ namespace SearchableTests
       var matches = TextToWordMatches.HighlightPhraseMatchInContent("dog", "I am a dog and a cat dog dog dog", 2, stemmer);
       matches.Highlight(stemmer).Count().ShouldBe(1);
       string str = matches.Highlight(stemmer).ToList()[0];
-      matches.Highlight(stemmer).ToList()[0].ShouldBe("am a <strong>dog</strong> and a");
+      matches.Highlight(stemmer).ToList()[0].ShouldBe("...am a <strong>dog</strong> and a...");
     }
 
   }
