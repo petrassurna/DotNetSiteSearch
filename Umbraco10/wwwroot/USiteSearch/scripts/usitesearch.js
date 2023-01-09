@@ -71,6 +71,7 @@ function DNS_ClearSearchResults() {
 
 function DNS_CloseSearch() {
     DNS_ClearSearchResults();
+    document.getElementById("dns-search-input").value = '';
     document.getElementById('dns-search-results').classList.remove('show');
     document.getElementById('dns-search-bar').classList.remove('clicked');
     document.getElementById('dns-search-overlay').style.display = 'none';
