@@ -83,7 +83,7 @@ $dns-search-fields-height: 40px;
             }
 
             p {
-                padding-bottom: 3px;
+                padding-bottom: 0px;
                 font-size: 14px;
 
                 strong {
@@ -91,8 +91,9 @@ $dns-search-fields-height: 40px;
                     font-weight: bold;
                 }
 
+
                 &:last-of-type {
-                    padding-bottom: 10px;
+                    padding-bottom: 0px;
                 }
             }
 

@@ -28,18 +28,21 @@ namespace SearchableTests
         try
         {
           provider.Add(content);
+          int wordsEachSide = 2;
 
-          var results = provider.Search("dog", 0, 10);
+          string query = "dog";
+
+          var results = provider.Search(query, 0, 10);
           results.Count().ShouldBe(1);
 
-          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], "dog", 2, stemmer);
+          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, wordsEachSide, stemmer);
 
           result.Title.ShouldBe("The <strong>Dog</strong> and the Cat");
           result.WordMatches.Count().ShouldBe(1);
 
-          string str = result.WordMatches.ToList()[0];
+          string str = result.WordMatches.ToList()[0].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, true, false);
 
-          result.WordMatches.ToList()[0].ShouldBe("...all about <strong>dog</strong> and cats");
+          str.ShouldBe("...all about <strong>dog</strong> and cats");
         }
         finally
         {
@@ -61,17 +64,18 @@ namespace SearchableTests
         {
           provider.Add(content);
 
-          var results = provider.Search("dog", 0, 10);
+          string query = "dog";
+
+          var results = provider.Search(query, 0, 10);
           results.Count().ShouldBe(1);
 
-          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], "dog", 2, stemmer);
+          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
           result.Title.ShouldBe("The <strong>Dog</strong> and the Cat");
           result.WordMatches.Count().ShouldBe(1);
 
-          string str = result.WordMatches.ToList()[0];
-
-          result.WordMatches.ToList()[0].ShouldBe("...all about <strong>dog</strong> and big...");
+          string str = result.WordMatches.ToList()[0].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, true, true);
+          str.ShouldBe("...all about <strong>dog</strong> and big...");
         }
         finally
         {
@@ -93,17 +97,19 @@ namespace SearchableTests
         {
           provider.Add(content);
 
-          var results = provider.Search("dog", 0, 10);
+          string query = "dog";
+
+          var results = provider.Search(query, 0, 10);
           results.Count().ShouldBe(1);
 
-          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], "dog", 2, stemmer);
+          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
           result.Title.ShouldBe("The <strong>Dog</strong> and the Cat");
           result.WordMatches.Count().ShouldBe(1);
 
-          string str = result.WordMatches.ToList()[0];
+          string str = result.WordMatches.ToList()[0].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, true, true);
           result.Title.ShouldBe("The <strong>Dog</strong> and the Cat");
-          result.WordMatches.ToList()[0].ShouldBe("...really big <strong>Dog</strong> and big...");
+          str.ShouldBe("...really big <strong>Dog</strong> and big...");
         }
         finally
         {
@@ -118,21 +124,25 @@ namespace SearchableTests
     {
       IStemmer stemmer = new Stemmer();
       Content content = ContentFactory.WebPage("url", "/url", "The dog and the Cat", "about this really big dog and big cats which were furry");
-      
+
       using (ISearchProvider provider = new LuceneProvider(new RAMDirectory()))
       {
         try
         {
           provider.Add(content);
 
-          var results = provider.Search("Dog", 0, 10);
+          string query = "Dog";
+
+          var results = provider.Search(query, 0, 10);
           results.Count().ShouldBe(1);
 
-          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], "dog", 2, stemmer);
+          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
           result.Title.ShouldBe("The <strong>dog</strong> and the Cat");
           result.WordMatches.Count().ShouldBe(1);
-          result.WordMatches.ToList()[0].ShouldBe("...really big <strong>dog</strong> and big...");
+
+          string str = result.WordMatches.ToList()[0].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, true, true);
+          str.ShouldBe("...really big <strong>dog</strong> and big...");
         }
         finally
         {
@@ -156,16 +166,18 @@ namespace SearchableTests
         {
           provider.Add(content);
 
-          var results = provider.Search("animal", 0, 10);
+          string query = "animal";
+
+          var results = provider.Search(query, 0, 10);
           results.Count().ShouldBe(1);
 
-          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], "animal", 2, stemmer);
+          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
           result.Title.ShouldBe("All About <strong>Animals</strong>");
           result.WordMatches.Count().ShouldBe(1);
 
-          string str = result.WordMatches.ToList()[0];
-          result.WordMatches.ToList()[0].ShouldBe("...the forest <strong>animals</strong> taking refuge...");
+          string str = result.WordMatches.ToList()[0].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, true, true);
+          str.ShouldBe("...the forest <strong>animals</strong> taking refuge...");
         }
         finally
         {
@@ -173,5 +185,47 @@ namespace SearchableTests
         }
       }
     }
+
+
+
+    [Test]
+    public void MatchMultipleWordsDistributedEvenly()
+    {
+      IStemmer stemmer = new Stemmer();
+
+      Content content = ContentFactory.WebPage("url", "/url", "All About Animal", "During the early Tertiary, Africa was covered by a vast evergreen forest inhabited by an endemic forest fauna with manymost of the forest was destroyed, the forest animals taking refuge in the remaining forest islands. At the same \r\n");
+
+      using (ISearchProvider provider = new LuceneProvider(new RAMDirectory()))
+      {
+        try
+        {
+          provider.Add(content);
+
+          string query = "animal early vast";
+
+          var results = provider.Search(query, 0, 10);
+          results.Count().ShouldBe(1);
+
+          int wordsEachSide = 2;
+
+          var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, wordsEachSide, stemmer);
+
+          result.Title.ShouldBe("All About <strong>Animal</strong>");
+          result.WordMatches.Count().ShouldBe(3);
+
+          string str = result.WordMatches.ToList()[0].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, false, true);
+          str.ShouldBe("the forest <strong>animals</strong> taking refuge...");
+
+          str = result.WordMatches.ToList()[1].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer, false, true);
+          str.ShouldBe("During the <strong>early</strong> Tertiary, Africa...");
+        }
+        finally
+        {
+          provider.CleanUp();
+        }
+      }
+    }
+
+
   }
 }

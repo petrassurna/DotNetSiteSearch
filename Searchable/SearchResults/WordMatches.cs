@@ -11,6 +11,11 @@ namespace Searchable.SearchResults
   {
     public string[] SearchTerms { get; set; }
 
+    public WordMatches()
+    {
+      SearchTerms = new string[0];
+    }
+
     public WordMatches(string[] searchTerms)
     {
       SearchTerms = searchTerms;

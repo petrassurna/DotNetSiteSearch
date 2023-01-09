@@ -114,8 +114,8 @@ The back office login for the website is:
 
 	This references:
 	
-	~/USiteSearch/css/usitesearch.min.css and   
-	~/USiteSearch/scripts/usitesearch.js
+	*~/USiteSearch/css/usitesearch.min.css* and   
+	*~/USiteSearch/scripts/usitesearch.js*
 			
 			
 	which are included by bundling in *Bundling.cs*. Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
@@ -141,14 +141,14 @@ The back office login for the website is:
 	```
 
 7. Next we need to index the site, to do this, log into the backoffice and save and publish each of the pages.  
-   This will create the lucene index under the app_data folder as specified in startup.cs:
+   This will create the lucene index under the app_data folder as specified in *startup.cs*:
 
 	![app_data folder](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/app-data.jpg)
 
 	This folder can be deleted to reset the search.
 
 8. In order to engage the search, we need to give a front end element the attribute *id="site-search"*  
-This has been done for you in master.cshtml
+This has been done for you in *master.cshtml*
 
 	```
 
@@ -180,4 +180,4 @@ This has been done for you in master.cshtml
 
 	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/block-from-search.jpg)
 
-	This is already present in the sample porject and when you check it on, pages will be removed from the search.
+	This is already present in the sample project and when you check it on, pages will be removed from the search.
