@@ -19,11 +19,11 @@ namespace Searchable.SearchResults.HighlightedSearchResults
 
     private int WordsEachSide { get; set; }
 
-    public HighlightedSearchResult(IStemmer stemmer, int wordsEachSide)
+    public HighlightedSearchResult(string searchPhrase, IStemmer stemmer, int wordsEachSide)
     {
       Stemmer = stemmer;
       WordsEachSide = wordsEachSide;
-      Title = new(Stemmer, WordsEachSide);
+      Title = new(searchPhrase, stemmer, WordsEachSide);
     }
 
   }

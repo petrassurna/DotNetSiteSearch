@@ -37,10 +37,10 @@ namespace SearchableTests
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, wordsEachSide, stemmer);
 
-          result.Title.Highlight(query).ShouldBe("The <strong>Dog</strong> and the Cat");
+          result.Title.Highlight().ShouldBe("The <strong>Dog</strong> and the Cat");
           result.ContentMatches.Count().ShouldBe(1);
 
-          string str = result.ContentMatches.ToList()[0].Highlight(query);
+          string str = result.ContentMatches.ToList()[0].Highlight();
 
           str.ShouldBe("...all about <strong>dog</strong> and cats");
         }
@@ -71,10 +71,10 @@ namespace SearchableTests
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
-          result.Title.Highlight(query).ShouldBe("The <strong>Dog</strong> and the Cat");
+          result.Title.Highlight().ShouldBe("The <strong>Dog</strong> and the Cat");
           result.ContentMatches.Count().ShouldBe(1);
 
-          string str = result.ContentMatches.ToList()[0].Highlight(query);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           str.ShouldBe("all about <strong>dog</strong> and big...");
         }
         finally
@@ -104,11 +104,11 @@ namespace SearchableTests
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
-          result.Title.Highlight(query).ShouldBe("The <strong>Dog</strong> and the Cat");
+          result.Title.Highlight().ShouldBe("The <strong>Dog</strong> and the Cat");
           result.ContentMatches.Count().ShouldBe(1);
 
-          string str = result.ContentMatches.ToList()[0].Highlight(query);
-          result.Title.Highlight(query).ShouldBe("The <strong>Dog</strong> and the Cat");
+          string str = result.ContentMatches.ToList()[0].Highlight();
+          result.Title.Highlight().ShouldBe("The <strong>Dog</strong> and the Cat");
           str.ShouldBe("...really big <strong>Dog</strong> and big...");
         }
         finally
@@ -138,10 +138,10 @@ namespace SearchableTests
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
 
-          result.Title.Highlight(query).ShouldBe("The <strong>dog</strong> and the Cat");
+          result.Title.Highlight().ShouldBe("The <strong>dog</strong> and the Cat");
           result.ContentMatches.Count().ShouldBe(1);
 
-          string str = result.ContentMatches.ToList()[0].Highlight(query);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           str.ShouldBe("...really big <strong>dog</strong> and big...");
         }
         finally
@@ -176,9 +176,9 @@ namespace SearchableTests
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], searchPhrase, wordsEachSide, stemmer);
 
-          result.Title.Highlight(searchPhrase).ShouldBe("All About <strong>Animal</strong> in the <strong>early</strong> <strong>vast</strong> world");
+          result.Title.Highlight().ShouldBe("All About <strong>Animal</strong> in the <strong>early</strong> <strong>vast</strong> world");
 
-          string str = result.ContentMatches.ToList()[0].Highlight(searchPhrase);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           //str.ShouldBe("the forest <strong>animals</strong> taking refuge...");
 
           //str = result.WordMatches.ToList()[1].Highlight(query.Split(' ', StringSplitOptions.RemoveEmptyEntries), stemmer);
@@ -214,13 +214,13 @@ namespace SearchableTests
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, wordsEachSide, stemmer);
 
-          result.Title.Highlight(query).ShouldBe("All About <strong>Animal</strong>");
+          result.Title.Highlight().ShouldBe("All About <strong>Animal</strong>");
           result.ContentMatches.Count().ShouldBe(3);
 
-          string str = result.ContentMatches.ToList()[0].Highlight(query);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           str.ShouldBe("...the forest <strong>animals</strong> taking refuge...");
 
-          str = result.ContentMatches.ToList()[1].Highlight(query);
+          str = result.ContentMatches.ToList()[1].Highlight();
           str.ShouldBe("During the <strong>early</strong> Tertiary, Africa...");
         }
         finally

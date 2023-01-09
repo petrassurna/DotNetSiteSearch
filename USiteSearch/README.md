@@ -25,7 +25,8 @@ If you need help on this system or find bugs I respond to queries fairly quickly
 Let's get **USiteSearch** working in a sample Umbraco website so you can see exactly how it works. Installing on the sample
 site will teach you how to install it in your own site. Set up should take no longer than 15 minutes.
 
-Note: This help can also be viewed as a [YouTube tutorial](https://www.youtube.com) if you prefer seeing a video. 
+Note: This help can also be viewed as a [YouTube tutorial](https://www.youtube.com) if you prefer seeing a video. The video
+should solve most installation problems.
 
 ### Installation steps
 
@@ -47,9 +48,9 @@ The back office login for the website is:
 	or update-package USiteSearch -0.651-alpha    (if replacing an older version)
 	```
 
-3. Install   https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip
 
-	This installs some dlls as well as some content files under wwwroot and a partial view
+	This installs some css, images, javascript and a partial view
 
 
 	![Installed files](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
@@ -69,7 +70,7 @@ The back office login for the website is:
 
 	```
 
-	and also here:
+	and also the two lines in *ConfigureServices*:
 
 	```
 
@@ -174,7 +175,7 @@ This has been done for you in *master.cshtml*
 
 	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-exclude.jpg)
 
-	Typically you would exclude the navigation, footer and common margins.
+	Typically you would exclude the navigation, footer and common margins. You will need to resave each page to reindex these pages.
 
 10. If you want to remove whole pages from the site search, add the property *blockFromSearch* to document types:
 

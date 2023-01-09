@@ -43,7 +43,7 @@ namespace Searchable.SearchResults
 
       foreach (var match in this)
       {
-        string str = match.Highlight(SearchPhrase);
+        string str = match.Highlight();
         parts.Add(str);
       }
 

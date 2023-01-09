@@ -7,7 +7,7 @@ namespace Searchable.SearchResults.Factories
   public class TextToWordMatch
   {
 
-    public static WordMatch GetMatch(string word, string content, int wordsEachSide, IStemmer stemmer)
+    public static WordMatch GetMatch(string word, string searchPhrase, string content, int wordsEachSide, IStemmer stemmer)
     {
       WordMatch match = null!;
 
@@ -21,7 +21,7 @@ namespace Searchable.SearchResults.Factories
 
       if (index != -1)
       {
-        match = new WordMatch(stemmer, wordsEachSide);
+        match = new WordMatch(searchPhrase, stemmer, wordsEachSide);
         match.WordsLeft = WordsBefore(contents, index, wordsEachSide);
         match.Word = contents[index];
         match.WordsRight = WordsAfter(contents, index, wordsEachSide);

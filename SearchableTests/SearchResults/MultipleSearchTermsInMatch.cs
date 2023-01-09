@@ -36,10 +36,10 @@ namespace SearchableTests
           results.Count().ShouldBe(1);
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], query, 2, stemmer);
-          result.Title.Highlight(query).ShouldBe("All About <strong>Animals</strong> <strong>EarLy</strong>");
+          result.Title.Highlight().ShouldBe("All About <strong>Animals</strong> <strong>EarLy</strong>");
 
           result.ContentMatches.Count().ShouldBe(1);
-          string str = result.ContentMatches.ToList()[0].Highlight(query);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           str.ShouldBe("...days were <strong>animal</strong> the <strong>early</strong>...");
         }
         finally
@@ -68,13 +68,13 @@ namespace SearchableTests
           results.Count().ShouldBe(1);
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], searchPhrase, 3, stemmer);
-          result.Title.Highlight(searchPhrase).ShouldBe("All About <strong>Animals</strong> <strong>EarLy</strong> <strong>dog</strong>");
+          result.Title.Highlight().ShouldBe("All About <strong>Animals</strong> <strong>EarLy</strong> <strong>dog</strong>");
 
           result.ContentMatches.Count().ShouldBe(2);
-          string str = result.ContentMatches.ToList()[0].Highlight(searchPhrase);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           str.ShouldBe("...the days were <strong>animal</strong> the <strong>early</strong> Tertiary,...");
 
-          str = result.ContentMatches.ToList()[1].Highlight(searchPhrase);
+          str = result.ContentMatches.ToList()[1].Highlight();
           str.ShouldBe("...covered by a <strong>dog</strong> <strong>animal</strong> <strong>early</strong> vast...");
         }
         finally
@@ -103,13 +103,13 @@ namespace SearchableTests
           results.Count().ShouldBe(1);
 
           var result = ContentToHighlightSearchResult.GetSearchResults(results.ToList()[0], searchPhrase, 3, stemmer);
-          result.Title.Highlight(searchPhrase).ShouldBe("All About <strong>Animals</strong> <strong>EarLy</strong> <strong>dog</strong>");
+          result.Title.Highlight().ShouldBe("All About <strong>Animals</strong> <strong>EarLy</strong> <strong>dog</strong>");
 
           result.ContentMatches.Count().ShouldBe(2);
-          string str = result.ContentMatches.ToList()[0].Highlight(searchPhrase);
+          string str = result.ContentMatches.ToList()[0].Highlight();
           str.ShouldBe("During when the <strong>days</strong> were <strong>animal</strong> the...");
 
-          str = result.ContentMatches.ToList()[1].Highlight(searchPhrase);
+          str = result.ContentMatches.ToList()[1].Highlight();
           str.ShouldBe("...covered by a <strong>dog</strong> <strong>animal</strong> <strong>early</strong> vast...");
         }
         finally

@@ -21,7 +21,7 @@ namespace Searchable.SearchResults.Factories
 
     public static HighlightedSearchResult GetSearchResults(SearchResult result, string searchPhrase, int wordsEachSide, IStemmer stemmer)
     {
-      HighlightedSearchResult highlightedResult = new HighlightedSearchResult(stemmer, wordsEachSide);
+      HighlightedSearchResult highlightedResult = new HighlightedSearchResult(searchPhrase, stemmer, wordsEachSide);
 
       highlightedResult.Path = result.Content.Field("Url").Value;
       highlightedResult.Score = result.Score;

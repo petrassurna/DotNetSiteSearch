@@ -18,8 +18,9 @@ namespace Searchable.SearchResults
     public AdjoiningWords WordsRight { get; set; } = null!;
 
 
-    public WordMatch(IStemmer stemmer, int wordsEachSide)
+    public WordMatch(string searchPhrase, IStemmer stemmer, int wordsEachSide)
     {
+      SearchPhrase = searchPhrase;
       Stemmer= stemmer;
       WordsEachSide= wordsEachSide;
     }
@@ -29,9 +30,9 @@ namespace Searchable.SearchResults
       Word.ToLower() == word.ToLower() || 
       WordsRight.Contains(word);
 
-    public string Highlight(string searchPharse)
+    public string Highlight()
     {
-      IEnumerable<string> words = Split(searchPharse);
+      IEnumerable<string> words = Split(SearchPhrase);
 
       string str =  $"{WordsLeft.Highlight(words, Stemmer)} {Word.Highlight(words, Stemmer)} {WordsRight.Highlight(words, Stemmer)}".Trim();
 
