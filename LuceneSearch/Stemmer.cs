@@ -17,11 +17,10 @@ namespace LuceneSearch
 
     public string Stem(string word)
     {
-      if (!IsSingular(word))
+      if (!string.IsNullOrWhiteSpace(word) && IsSingular(word))
       {
         word = PluralizationProvider.Singularize(word);
       }
-
       return word;
     }
 

@@ -81,7 +81,7 @@ The back office login for the website is:
           .AddBackOffice()
           .AddWebsite()
           .AddComposers()
-          //.AddUSiteSearch()
+          //.AddUSiteSearch() <- uncomment this
           .AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
           .Build();
 
