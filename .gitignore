@@ -604,3 +604,5 @@
 /USiteSearch/Properties
 /USiteSearch/nuget.exe
 /TestResults
+/PostBuildActions/bin
+/PostBuildActions/obj
