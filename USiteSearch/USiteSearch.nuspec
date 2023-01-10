@@ -51,6 +51,8 @@
 		<dependencies>
 			<dependency id="PluralizeService.Core" version="1.2.21147.2" />
 		</dependencies>
+
+    <readme>docs\README.md</readme>
 	
 		<!--
 		<contentFiles>
@@ -64,7 +66,7 @@
 	<files>
 		<file src=".\images\umbraco-site-search.jpeg" target="images\" />
 			
-		<file src="README.md" target="" />
+    <file src="..\README.md" target="docs\" />
 
 		<!--
 		
