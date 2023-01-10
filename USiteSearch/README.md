@@ -56,7 +56,7 @@ The back office login for the website is:
 
 	This installs some css, images, javascript and a partial view. The files it installs are show below:
 
-	![Installed files](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
+	<img src="https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg" style="height:400px">
 
 4. Run the project to view the sample website. Now let's add *USiteSearch*.
    'Open startup.cs and add these three using statements at the top of the file:
