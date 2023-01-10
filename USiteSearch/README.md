@@ -1,3 +1,8 @@
+## Current version
+
+0.650.nupkg 
+This version can be installed and works!
+
 ## Why Create USiteSearch?
 
 I build websites using the Umbraco content management system, and one feature that is often necessary 
