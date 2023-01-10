@@ -1,3 +1,7 @@
+## Warning
+
+This repo is coming soon. There is no functional code as yet. Peace.
+
 ## Why Create USiteSearch?
 
 I build websites using the Umbraco content management system, and one feature that is often necessary 
@@ -15,10 +19,6 @@ and [Mysterious Universe](https://mysteriousuniverse.org/) which has a total of 
 
 ## Need an Umbraco developer?
 You can reach me at [my website](https://www.yart.com.au/capabilities/umbraco-developer/)
-
-## Support
-
-Contact me if you need support, this is free :-)
 
 ## Installation
 
@@ -40,12 +40,17 @@ The back office login for the website is:
 	Alternatively clone the same website in [Umbraco 11](https://github.com/petrassurna/umbraco11samplesite.git) if you are using Umbraco 11.  \
 	Check the website runs and you can log in to the backoffice.
 
-2. Install the latest nuget USiteSearch package via the NuGet package manager:
+2. Install the nuget package USiteSearch via the NuGet package manager:
 
-	<img src="https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg" style="height:500px">
+	```
+	dotnet add package USiteSearch --version 0.650-alpha
+	```
+	or, if replacing an older version:
+	```
+	update-package USiteSearch -0.650-alpha    
+	```
 
-
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-VERSION.zip  
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.650-alpha.zip  
    Unzip the files in the *project folder*.
 
 	This installs some css, images, javascript and a partial view. The files it installs are show below:

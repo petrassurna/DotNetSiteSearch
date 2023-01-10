@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>USiteSearch</id>
+    <version>0.650.0-alpha</version>
+    <authors>Petras Surna</authors>
+    <owners>Petras Surna</owners>
+    <license type="expression">AGPL-3.0-or-later</license>
+    <licenseUrl>https://licenses.nuget.org/AGPL-3.0-or-later</licenseUrl>
+    <icon>images\umbraco-site-search.jpeg</icon>
+    <readme>docs\README.md</readme>
+    <projectUrl>https://github.com/petrassurna/dotnetsitesearch</projectUrl>
+    <description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</description>
+    <releaseNotes>Prerelease - for testing only</releaseNotes>
+    <copyright>Copyright ©2022-2023 Yart Pty Ltd</copyright>
+    <tags>Umbraco, website, search</tags>
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="PluralizeService.Core" version="1.2.21147.2" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
