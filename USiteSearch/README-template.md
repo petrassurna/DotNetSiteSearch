@@ -42,13 +42,8 @@ The back office login for the website is:
 
 2. Install the nuget package USiteSearch via the NuGet package manager:
 
-	```
-	dotnet add package USiteSearch --version VERSION
-	```
-	or, if replacing an older version:
-	```
-	update-package USiteSearch -VERSION    
-	```
+	<img src="https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg" style="height:500px">
+
 
 3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-VERSION.zip  
    Unzip the files in the *project folder*.
