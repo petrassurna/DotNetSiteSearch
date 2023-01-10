@@ -95,7 +95,7 @@ The back office login for the website is:
 
 
 5. Next we need to enable the css and javascript used by USiteSearch. 
-Add these lines in *views/master.cshtml* in the <head> section:
+Add these lines in *views/master.cshtml* in the *head* section:
 
 	```
 	<link rel="stylesheet" href="usitesearch-css-bundle" />
@@ -108,7 +108,7 @@ Add these lines in *views/master.cshtml* in the <head> section:
 	*~/USiteSearch/scripts/usitesearch.js*
 
 
-6.  Add this line in *Views/master.cshtml* under the *<body>* tag:
+6.  Add this line in *Views/master.cshtml* under the *body* tag:
 
 	```
 	@Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
