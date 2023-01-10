@@ -44,7 +44,10 @@ The back office login for the website is:
 
 	```
 	dotnet add package USiteSearch --version VERSION
-	or update-package USiteSearch -VERSION    (if replacing an older version)
+	```
+	or, if replacing an older version:
+	```
+	update-package USiteSearch -VERSION    
 	```
 
 3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-VERSION.zip  
@@ -52,11 +55,10 @@ The back office login for the website is:
 
 	This installs some css, images, javascript and a partial view. The files it installs are show below.
 
-
 	![Installed files](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
 
-4. Run the project to view the sample website. Open startup.cs and add there four lines under the using 
-statements:
+4. Run the project to view the sample website. Now let's add *USiteSearch*.
+   'Open startup.cs and add these three using statements:
 
 	```
 	using Umbraco.Cms.Core.Notifications;
@@ -66,44 +68,40 @@ statements:
 	using LuceneSearch;
 	using Searchable;
 	using USiteSearch.Notifications;
-
 	```
 
-	Add *AddUSiteSearch* to *ConfigureServices*
-
-
-	```
-    public void ConfigureServices(IServiceCollection services)
-    {
-      services.AddUmbraco(_env, _config)
-          .AddBackOffice()
-          .AddWebsite()
-          .AddComposers()
-          .AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
-					.AddUSiteSearch(services, "app_data/USiteSearch", 9) //add this
-          .Build();
-    }
+	Add *AddUSiteSearch* to *ConfigureServices*:
 
 	```
+		public void ConfigureServices(IServiceCollection services)
+		{
+			services.AddUmbraco(_env, _config)
+				.AddBackOffice()
+				.AddWebsite()
+				.AddComposers()
+				.AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
+				.AddUSiteSearch(services, "app_data/USiteSearch", 9) //add this
+				.Build();
+		}
+	```
 
-	This configures the USiteSearch to a LuceneProvider search provider (there is a long term intention to add AzureSearch):
+	This configures the USiteSearch to a LuceneProvider search provider:
 
 	*app_data/USiteSearch* - is the relative path where Lucene will store data in the application.
 
 	*9* - When displaying search results, the number of words to display each side of a word match.
 
-	Note the line *AddNotificationHandler* which add bundling via *Bundling.cs*. 
-	This is an addition to this project but is something you should probably be adding
-	anyway for efficient css and javascript includes. Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
+	Note the line *AddNotificationHandler* which adds bundling via *Bundling.cs*. 
+	This is an addition to the base Umbraco project but is something you should probably be adding for all css and javascript.
+	Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
 
 
 5. Next we need to enable the css and javascript used by USiteSearch. 
-Add these lines in *views/master.cshtml* in the <head> section.
+Add these lines in *views/master.cshtml* in the <head> section:
 
 	```
-    <link rel="stylesheet" href="usitesearch-css-bundle" />
-    <script src="usitesearch-js-bundle"></script>
-
+	<link rel="stylesheet" href="usitesearch-css-bundle" />
+	<script src="usitesearch-js-bundle"></script>
 	```
 
 	This includes these files via bundling:
@@ -112,12 +110,10 @@ Add these lines in *views/master.cshtml* in the <head> section.
 	*~/USiteSearch/scripts/usitesearch.js*
 
 
-6.  Add this line in *Views/master.cshtml* under the *<body>* tag
-
+6.  Add this line in *Views/master.cshtml* under the *<body>* tag:
 
 	```
-  @Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
-
+	@Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
 	```
 
 7. Next we need to index the site, to do this, log into the backoffice and save and publish each of the pages.  
@@ -128,13 +124,12 @@ Add these lines in *views/master.cshtml* in the <head> section.
 	This folder can be deleted to clear the search.
 
 8. In order to engage the search, we need to give a front end element the attribute *id="site-search"*  
-This has been done for you in *master.cshtml*
+This has been done for you in *master.cshtml*:
 
 	```
 	<li>
 		<a href="#" id="site-search" title="Search the site">Site search</a>
 	</li>
-
 	```
 
 	Click on the element and you should see the search bar, enter the term *animals*. After typing a few characters you should 
