@@ -19,6 +19,7 @@ Earlier versions of the code used in USiteSearch can be seen in action on the [E
 and [Mysterious Universe](https://mysteriousuniverse.org/) which has a total of 20,000 blog posts.
 
 ## Need an Umbraco developer?
+
 You can reach me at [my website](https://www.yart.com.au/capabilities/umbraco-developer/)
 
 ## Support
@@ -30,7 +31,7 @@ Contact me if you need support, this is free :-)
 Let's get **USiteSearch** working in a sample Umbraco website so you can see exactly how it works. Installing on the sample
 site will teach you how to install it in your own site. Set up should take no longer than 15 minutes.
 
-Note: This help can also be viewed as a [YouTube tutorial](https://www.youtube.com) if you prefer seeing a video. The video
+Note: This help can also be viewed as a [YouTube tutorial](https://youtu.be/gf2Gx8i6vr8) if you prefer watching a video. The video
 should solve most installation problems.
 
 ### Installation steps
