@@ -169,8 +169,6 @@ function DNS_DrawSearchResult(data) {
     link.innerText = data.path;
     link.setAttribute('href', data.path);
 
-    console.log(JSON.stringify(data));
-
     search_result.appendChild(heading);
 
     for (var i = 0; i < data.contentMatches.length; i++) {

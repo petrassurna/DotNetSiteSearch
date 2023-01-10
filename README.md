@@ -49,21 +49,23 @@ The back office login for the website is:
 	```
 
 3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip  
-   Unzip the files in the project folder.
+   Unzip the files in the *project folder*.
 
-	This installs some css, images, javascript and a partial view
+	This installs some css, images, javascript and a partial view. The files it installs are show below.
 
 
 	![Installed files](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
 
-4. Run the project to view the sample website. Open startup.cs and uncomment these four using statements:
+4. Run the project to view the sample website. Open startup.cs and add there four lines under the using 
+statements
+
 
 	```
 
 	using Umbraco.Cms.Core.Notifications;
 	using UmbracoExtensions;
 
-	//uncomment the below
+	//add these four lines
 	using LuceneSearch;
 	using Searchable;
 	using Umbraco.Cms.Core.Notifications;
@@ -71,7 +73,8 @@ The back office login for the website is:
 
 	```
 
-	and also the two lines in *ConfigureServices*:
+	Add *AddUSiteSearch* to *ConfigureServices*
+
 
 	```
 
@@ -81,31 +84,26 @@ The back office login for the website is:
           .AddBackOffice()
           .AddWebsite()
           .AddComposers()
-          //.AddUSiteSearch() <- uncomment this
           .AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
+					.AddUSiteSearch(services, "app_data/USiteSearch", 9) //add this
           .Build();
-
-      //uncomment the below
-      services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 10));
     }
-	```
-
-	Note this line:
 
 	```
 
-      services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 10));
+	This configures the USiteSearch to a LuceneProvider search provider (there is a long term intention to add AzureSearch):
 
-	```
+	*app_data/USiteSearch* - is the relative path where Lucene will store data in the application.
 
-	This configures the USiteSearch to a LuceneProvider search provider
+	*9* - When displaying search results, the number of words to display each side of a word match.
 
-	*app_data/USiteSearch* - is the relative path where Lucene will store data.
+	Note the line *AddNotificationHandler* which add bundling via *Bundling.cs*. 
+	This is an addition to this project but is something you should probably be adding
+	anyway for efficient css and javascript includes. Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
 
-	*10* - When displaying search results, the number of words to display each side of a word match.
 
-
-5. Next we need to enable the css and javascript used by USiteSearch. Uncomment these lines in *views/master.cshtml*:
+5. Next we need to enable the css and javascript used by USiteSearch. Add these lines in *views/master.cshtml* 
+above the body tag to engage bundling:
 
 	```
 
@@ -114,40 +112,26 @@ The back office login for the website is:
 
 	```
 
-	This references:
+	This includes these files via bundling:
 	
 	*~/USiteSearch/css/usitesearch.min.css* and   
 	*~/USiteSearch/scripts/usitesearch.js*
-			
-			
-	which are included by bundling in *Bundling.cs*. Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
 
-6.  Uncomment these lines in *Views/master.cshtml* so the html for USiteSearch is engaged:
+
+6.  Add this line in *Views/master.cshtml* under the *<body>* tag
+
 
 	```
-
-    @*
-    <section id="dns-search-bar" class="dns-search-bar" usitesearch-exclude="true" zzz>
-    <div id="dns-search-fields" class="dns-search-fields">
-    <input id="dns-search-input" type="text" placeholder="search">
-    <img id="dns-search-loader" src="/usitesearch/images/spinner.gif" width="50" height="50">
-    <a href="#" id="dns-search-close" title="Close"><img src="/usitesearch/images/icon-close.svg"></a>
-    </div>
-
-    <div id="dns-search-results" class="dns-search-results">
-    </div>
-    </section>
-    <div id="dns-search-overlay"></div>
-    *@
+  @Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
 
 	```
 
 7. Next we need to index the site, to do this, log into the backoffice and save and publish each of the pages.  
-   This will create the lucene index under the app_data folder as specified in *startup.cs*:
+   This will create the lucene index under the *app_data* folder as specified in *startup.cs*:
 
 	![app_data folder](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/app-data.jpg)
 
-	This folder can be deleted to reset the search.
+	This folder can be deleted to clear the search.
 
 8. In order to engage the search, we need to give a front end element the attribute *id="site-search"*  
 This has been done for you in *master.cshtml*
@@ -165,7 +149,7 @@ This has been done for you in *master.cshtml*
 
 	![app_data folder](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-animals.jpg)
 
-	Refine the search, search for *animals lions*. Note the results reduce and each search term is highlighted with 10 words either
+	Refine the search, search for *animals lions*. Note the results reduce and each search term is highlighted with 9 words either
 	side of the word match. This is the variable we set earlier in *startup.cs*.
 
 9. Search for the term *play close* and notice it matches all pages: 

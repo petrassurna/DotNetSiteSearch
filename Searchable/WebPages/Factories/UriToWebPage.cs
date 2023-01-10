@@ -1,42 +1,51 @@
 ﻿using Searchable.SearchableContent;
 using Searchable.SearchableContent.Factories;
 using System.Net;
+using System.Net.Http;
 using TextFormatting;
 
 namespace Searchable.WebPages.Factories
 {
   public class UriToWebPage
   {
-    public const string ROOT_PAGE = "aaarootaaa";
+    public const string ROOT_PAGE = "RootPagePathString";
 
-    private static async Task<string> GetHtml(Uri uri)
+    private static async Task<string> GetHtml(Uri uri, IHttpClientFactory clientFactory)
     {
-      string html = "";
-      HttpClient Client = new HttpClient();
-      var response = await Client.GetAsync(uri.ToString());
+      string html = string.Empty;
 
-      using (HttpContent httpContent = response.Content)
+      var request = new HttpRequestMessage(HttpMethod.Get, uri);
+      var client = clientFactory.CreateClient();
+      var response = await client.SendAsync(request);
+
+      if (response.IsSuccessStatusCode)
       {
-        if(response.StatusCode == HttpStatusCode.OK)
+        using var responseStream = await response.Content.ReadAsStreamAsync();
+
+        var responseValue = string.Empty;
+
+        Task task = response.Content.ReadAsStreamAsync().ContinueWith(t =>
         {
-          html = httpContent.ReadAsStringAsync().Result;
-        }
-        else
-        {
-          html = "-1";
-        }
+          var stream = t.Result;
+          using (var reader = new StreamReader(stream))
+          {
+            html = reader.ReadToEnd();
+          }
+        });
+
+        task.Wait();
       }
 
       return html;
     }
 
 
-    public static async Task<Content> GetWebPage(int id, Uri uri)
+    public static async Task<Content> GetWebPage(int id, Uri uri, IHttpClientFactory clientFactory)
     {
-      string html = await GetHtml(uri);
+      string html = await GetHtml(uri, clientFactory);
       Content content = new Content();
-      
-      if(html != "-1")
+
+      if (html != "-1")
       {
         content = GetWebPage(id, uri, html);
       }

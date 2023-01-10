@@ -13,18 +13,22 @@ namespace USiteSearch.Notifications
 {
   public class BaseNotification
   {
-    protected static HttpClient Client = new HttpClient();
+
+
+    private readonly IHttpClientFactory _clientFactory;
     protected readonly IHttpContextAccessor _contextAccessor;
     protected readonly UmbracoHelper _umbracoHelper;
     protected readonly ISearchProvider _Provider;
 
     public BaseNotification(IHttpContextAccessor contextAccessor,
       UmbracoHelper umbracoHelper,
-       ISearchProvider provider)
+       ISearchProvider provider, IHttpClientFactory clientFactory)
     {
+      _clientFactory = clientFactory;
       _contextAccessor = contextAccessor;
       _umbracoHelper = umbracoHelper;
       _Provider = provider;
+
     }
 
 
@@ -37,7 +41,7 @@ namespace USiteSearch.Notifications
 
       if (!PageBlocked(content))
       {
-        Searchable.SearchableContent.Content webPage = UriToWebPage.GetWebPage(content.Id, new Uri(url)).Result;
+        Searchable.SearchableContent.Content webPage = UriToWebPage.GetWebPage(content.Id, new Uri(url), _clientFactory).Result;
 
         if (!webPage.IsEmpty())
         {

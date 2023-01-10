@@ -39,11 +39,9 @@ namespace Umbraco10
           .AddBackOffice()
           .AddWebsite()
           .AddComposers()
-          .AddUSiteSearch()
+          .AddUSiteSearch(services, "app_data/USiteSearch", 9)
           .AddNotificationHandler<UmbracoApplicationStartingNotification, CreateBundlesNotificationHandler>()
           .Build();
-
-      services.AddSingleton(typeof(ISearchProvider), new LuceneProvider("app_data/USiteSearch", 10));
     }
 
 

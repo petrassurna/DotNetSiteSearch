@@ -11,8 +11,8 @@ namespace USiteSearch.Notifications
   {
 
     public UnpublishedNotification(IHttpContextAccessor contextAccessor,
-      UmbracoHelper umbracoHelper, ISearchProvider indexer)
-      : base(contextAccessor, umbracoHelper, indexer)
+      UmbracoHelper umbracoHelper, ISearchProvider indexer, IHttpClientFactory clientFactory)
+      : base(contextAccessor, umbracoHelper, indexer, clientFactory)
     {
     }
 

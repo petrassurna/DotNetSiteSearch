@@ -17,7 +17,7 @@ namespace LuceneSearch
 
     public string Stem(string word)
     {
-      if (!string.IsNullOrWhiteSpace(word) && IsSingular(word))
+      if (!string.IsNullOrWhiteSpace(word) && !IsSingular(word))
       {
         word = PluralizationProvider.Singularize(word);
       }

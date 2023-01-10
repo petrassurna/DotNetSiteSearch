@@ -1,6 +1,7 @@
 using Searchable.SearchableContent;
 using Searchable.WebPages;
 using Searchable.WebPages.Factories;
+using SearchableTests;
 
 namespace WebPageLibraryTests
 {
@@ -29,7 +30,11 @@ namespace WebPageLibraryTests
 
       string url = "https://www.yart.com.au/blog/woocommerce-hike-pos-plugin-to-improve-synchronisation/";
       Uri uri = new Uri(url);
-      page = await UriToWebPage.GetWebPage(1, uri);
+
+      DefaultHttpClientFactory client = new DefaultHttpClientFactory();
+      client.CreateClient("test");
+
+      page = await UriToWebPage.GetWebPage(1, uri, client);
       Assert.IsTrue(page.Field("Url").Value == "/blog/woocommerce-hike-pos-plugin-to-improve-synchronisation/");
       string content = "Help me with WooCommerce MENU";
       Assert.IsTrue(page.Field("Title").Value == "Hike WooCommerce custom synchronisation plugin");

@@ -2,7 +2,7 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Page>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-    Layout = null;
+  Layout = null;
 }
 
 <!DOCTYPE html>
@@ -30,20 +30,7 @@
 
 <body>
 
-  <section id="dns-search-bar" class="dns-search-bar" usitesearch-exclude="true" zzz>
-    <div id="dns-search-fields" class="dns-search-fields">
-      <input id="dns-search-input" type="text" placeholder="search">
-      <img id="dns-search-loader" src="/usitesearch/images/spinner.gif" width="50" height="50">
-      <a href="#" id="dns-search-close" title="Close"><img src="/usitesearch/images/icon-close.svg"></a>
-    </div>
-
-    <div id="dns-search-results" class="dns-search-results">
-    </div>
-  </section>
-  <div id="dns-search-overlay"></div>
-
-
-
+  @Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
 
   <div class="wrapper">
     <header class="header">
@@ -59,16 +46,16 @@
               <ul>
                 <li class="active"><a href="#">Home</a></li>
 
-                                @{
-                                    var selection = Umbraco.ContentAtRoot().FirstOrDefault().Children().Where(x => x.IsVisible());
-                                }
+                @{
+                  var selection = Umbraco.ContentAtRoot().FirstOrDefault().Children().Where(x => x.IsVisible());
+                }
 
-                                @foreach (var item in selection)
-                                {
-                    <li>
-                      <a href="@item.Url()">@item.Name()</a>
-                    </li>
-                                }
+                @foreach (var item in selection)
+                {
+                  <li>
+                    <a href="@item.Url()">@item.Name()</a>
+                  </li>
+                }
 
                 <li>
                   <a href="#" id="site-search" title="Search the site">Site search</a>
@@ -90,7 +77,7 @@
                 <div class="blog-area">
                   <div class="blog-area-part">
 
-                                        @RenderBody()
+                    @RenderBody()
 
                   </div>
                   <div class="ads-area">
