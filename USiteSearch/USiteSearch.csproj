@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>USiteSearch</Title>
-    <Version>0.65111-alpha</Version>
+    <Version>0.65-alpha</Version>
     <Authors>Petras Surna</Authors>
     <Company>Yart</Company>
     <Description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</Description>
