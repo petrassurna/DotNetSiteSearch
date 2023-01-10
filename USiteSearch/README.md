@@ -43,46 +43,44 @@ The back office login for the website is:
 2. Install the nuget package USiteSearch via the NuGet package manager:
 
 	```
-	dotnet add package USiteSearch --version 0.65-alpha
+	dotnet add package USiteSearch --version 0.65111-alpha
 	```
 	or, if replacing an older version:
 	```
-	update-package USiteSearch -0.65-alpha    
+	update-package USiteSearch -0.65111-alpha    
 	```
 
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65-alpha.zip  
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.65111-alpha.zip  
    Unzip the files in the *project folder*.
 
-	This installs some css, images, javascript and a partial view. The files it installs are show below.
+	This installs some css, images, javascript and a partial view. The files it installs are show below:
 
 	![Installed files](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
 
 4. Run the project to view the sample website. Now let's add *USiteSearch*.
-   'Open startup.cs and add these three using statements:
+   'Open startup.cs and add these three using statements at the top of the file:
 
 	```
 	using Umbraco.Cms.Core.Notifications;
 	using UmbracoExtensions;
 
-	//add these three lines
-	using LuceneSearch;
-	using Searchable;
+	//add this line
 	using USiteSearch.Notifications;
 	```
 
 	Add *AddUSiteSearch* to *ConfigureServices*:
 
 	```
-		public void ConfigureServices(IServiceCollection services)
-		{
-			services.AddUmbraco(_env, _config)
-				.AddBackOffice()
-				.AddWebsite()
-				.AddComposers()
-				.AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
-				.AddUSiteSearch(services, "app_data/USiteSearch", 9) //add this
-				.Build();
-		}
+	public void ConfigureServices(IServiceCollection services)
+	{
+		services.AddUmbraco(_env, _config)
+			.AddBackOffice()
+			.AddWebsite()
+			.AddComposers()
+			.AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
+			.AddUSiteSearch(services, "app_data/USiteSearch", 9) //add this
+			.Build();
+	}
 	```
 
 	This configures the USiteSearch to a LuceneProvider search provider:
@@ -148,10 +146,10 @@ This has been done for you in *master.cshtml*:
 
 	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-exclude.jpg)
 
-	Typically you would exclude the navigation, footer and common margins. You will need to resave each page to reindex these pages.
+	Typically you would exclude the navigation, footer and common margins. You will need to save each page again to reindex these pages.
 
 10. If you want to remove whole pages from the site search, add the property *blockFromSearch* to document types:
 
 	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/block-from-search.jpg)
 
-	This is already present in the sample project and when you check it on, pages will be removed from the search.
+	This is already present in the sample project and when you check it on, pages will be removed from the search if you save them after checking the option.
