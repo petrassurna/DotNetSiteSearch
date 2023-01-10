@@ -31,20 +31,19 @@ Contact me if you need support, this is free :-)
 Let's get **USiteSearch** working in a sample Umbraco website so you can see exactly how it works. Installing on the sample
 site will teach you how to install it in your own site. Set up should take no longer than 15 minutes.
 
-Note: This help can also be viewed as a [YouTube tutorial](https://youtu.be/gf2Gx8i6vr8){:target="_blank"} if you prefer watching a video. The video
-should solve most installation problems.
+Note: This help can also be viewed as a <a href="https://youtu.be/gf2Gx8i6vr8" target="_blank">YouTube tutorial</a> if 
+you prefer watching a video. 
 
 ### Installation steps
 
-1. Clone this basic [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git){:target="_blank"}. 
+1. Clone this basic <a href="https://github.com/petrassurna/umbraco10samplesite.git" target="_blank">Umbraco 10 website</a>. 
 The website comes with an embedded database so it should run without further modifications. 
 The back office login for the website is:
 
 	Username: admin@admin.com  
 	Password: admin12345
 
-	Alternatively clone the same website in [Umbraco 11](https://github.com/petrassurna/umbraco11samplesite.git){:target="_blank"} if you are using Umbraco 11.  \
-	Check the website runs and you can log in to the backoffice.
+	Alternatively clone the same website in <a href="https://github.com/petrassurna/umbraco11samplesite.git" target="_blank">Umbraco 11</a> if you are using Umbraco 11. Check the website runs and you can log in to the backoffice.
 
 2. Install the latest nuget USiteSearch package via the NuGet package manager:
 
