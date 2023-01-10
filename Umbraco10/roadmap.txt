@@ -1,13 +1,9 @@
 ﻿How to build nuget packages
 ---------------------------
 
-1. Change USiteSearch project properties 
-   -Package
-   -General 
-   - Package Version
+1. Change USiteSearch project properties in Package > General > Package Version to the latest version e.g. 0.65-alpha
 
-   to the latest version e.g. 0.6511-alpha
-
+2. Add the generated nupkg and zip files in /nuget to git
 
 Notes
 -----
@@ -15,27 +11,7 @@ Notes
 can't get posttbuild to work in USiteSearch
 "$(SolutionDir)PostBuildActions\bin\Debug\net6.0\PostBuildActions.exe" $(Version)
 
-Too much is highlighted on:
-
-animals snow leopard
-
-
-
-https://gist.github.com/lkaczanowski/9131893
-
-
-bugs
-
-eukaryotic million body
-eukaryotic million aquatic
-
-
-
 why you cant copy file nuget files to a folder
 https://stackoverflow.com/questions/51959638/nuget-package-contentfiles-not-copied-to-net-core-project
-
-
--list on StackOverflow
-
 
 One common approach is to use a cryptographic hash function to create a unique fingerprint of the license key. The fingerprint can then be stored on the licensing server or in the package itself, and the package can verify the fingerprint of the entered key against the stored fingerprint to determine if the key is valid. This approach can provide a high level of security, but it requires the use of a secure cryptographic hash function and may not be suitable for all scenarios.
