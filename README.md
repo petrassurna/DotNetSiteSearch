@@ -43,7 +43,6 @@ The back office login for the website is:
 2. Install the nuget package USiteSearch via the NuGet package manager:
 
 	```
-
 	dotnet add package USiteSearch --version 0.65-alpha
 	or update-package USiteSearch -0.65-alpha    (if replacing an older version)
 	```
@@ -57,18 +56,15 @@ The back office login for the website is:
 	![Installed files](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
 
 4. Run the project to view the sample website. Open startup.cs and add there four lines under the using 
-statements
-
+statements:
 
 	```
-
 	using Umbraco.Cms.Core.Notifications;
 	using UmbracoExtensions;
 
-	//add these four lines
+	//add these three lines
 	using LuceneSearch;
 	using Searchable;
-	using Umbraco.Cms.Core.Notifications;
 	using USiteSearch.Notifications;
 
 	```
@@ -77,7 +73,6 @@ statements
 
 
 	```
-
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddUmbraco(_env, _config)
@@ -102,11 +97,10 @@ statements
 	anyway for efficient css and javascript includes. Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
 
 
-5. Next we need to enable the css and javascript used by USiteSearch. Add these lines in *views/master.cshtml* 
-above the body tag to engage bundling:
+5. Next we need to enable the css and javascript used by USiteSearch. 
+Add these lines in *views/master.cshtml* in the <head> section.
 
 	```
-
     <link rel="stylesheet" href="usitesearch-css-bundle" />
     <script src="usitesearch-js-bundle"></script>
 
@@ -137,7 +131,6 @@ above the body tag to engage bundling:
 This has been done for you in *master.cshtml*
 
 	```
-
 	<li>
 		<a href="#" id="site-search" title="Search the site">Site search</a>
 	</li>
