@@ -15,12 +15,11 @@ efficient and has resulted in bugs and other issues. To improve the quality of m
 use, I have decided to add unit and integration tests and turn it into a system that can be easily installed in just 15 minutes. 
 This system is called USiteSearch.
 
-Earlier versions of the code used in USiteSearch can be seen in action on the [Energy Council](https://www.energycouncil.com.au) 
-and [Mysterious Universe](https://mysteriousuniverse.org/) which has a total of 20,000 blog posts.
+Earlier versions of the code used in USiteSearch can be seen in action on <a href="https://mysteriousuniverse.org/" target="_blank">Mysterious Universe</a> which has a total of 20,000 blog posts.
 
 ## Need an Umbraco developer?
 
-You can reach me at [my website](https://www.yart.com.au/capabilities/umbraco-developer/)
+You can reach me at <a href="https://www.yart.com.au/capabilities/umbraco-developer/" target="_blank">my website</a>
 
 ## Support
 
