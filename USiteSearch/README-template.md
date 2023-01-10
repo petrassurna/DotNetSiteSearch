@@ -17,9 +17,8 @@ This system is called USiteSearch.
 Earlier versions of the code used in USiteSearch can be seen in action on the [Energy Council](https://www.energycouncil.com.au) 
 and [Mysterious Universe](https://mysteriousuniverse.org/) which has a total of 20,000 blog posts.
 
-If you need help on this system or find bugs I respond to queries fairly quickly at petras @ yart dot com dot au  
-
-If you are looking for an Umbraco developer you can contact me at [my website](https://www.yart.com.au/capabilities/umbraco-developer/)
+## Need an Umbraco developer?
+You can reach me at [my website](https://www.yart.com.au/capabilities/umbraco-developer/)
 
 ## Installation
 
