@@ -30,10 +30,12 @@ Contact me if you need support, this is free :-)
 Let's get **USiteSearch** working in a sample Umbraco website so you can see exactly how it works. Installing on the sample
 site will teach you how to install it in your own site. Set up should take no longer than 15 minutes.
 
-Note: This help can also be viewed as a <a href="https://youtu.be/gf2Gx8i6vr8" target="_blank">YouTube tutorial</a> if 
+Note: This help can also be viewed as a <a href="https://youtu.be/wRQICwJ3EPY" target="_blank">YouTube tutorial</a> if 
 you prefer watching a video. 
 
 ### Installation steps
+
+We will install USiteSearch on an Umbraco 10 (or 11) website to show how it works.
 
 1. Clone this basic <a href="https://github.com/petrassurna/umbraco10samplesite.git" target="_blank">Umbraco 10 website</a>. 
 The website comes with an embedded database so it should run without further modifications. 
