@@ -1,4 +1,4 @@
-## Current version
+## Add full text search to your Umbraco website in 15 minutes flat
 
 VERSION.nupkg 
 This version can be installed and works!

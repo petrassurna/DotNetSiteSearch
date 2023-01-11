@@ -29,7 +29,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 
 		<!-- Any details about this particular release -->
-		<releaseNotes>Prerelease - for testing only</releaseNotes>
+		<releaseNotes>0.651 - readme updates, package ready for your use!</releaseNotes>
 
 		<!-- 
             The description can be used in package manager UI. Note that the

@@ -1,6 +1,6 @@
-## Current version
+## Add full text search to your Umbraco website in 15 minutes flat
 
-0.650.nupkg 
+0.651.nupkg 
 This version can be installed and works!
 
 ## Why Create USiteSearch?
@@ -49,7 +49,7 @@ The back office login for the website is:
 	<img src="https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg" style="height:500px">
 
 
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.650.zip  
+3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.651.zip  
    Unzip the files in the *project folder*.
 
 	This installs some css, images, javascript and a partial view. The files it installs are show below:
