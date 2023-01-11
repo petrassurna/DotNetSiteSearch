@@ -1,6 +1,6 @@
 ## Add full text search to your Umbraco website in 15 minutes flat
 
-0.651.nupkg 
+0.651.nupkg  
 This version can be installed and works!
 
 ## Why Create USiteSearch?
@@ -15,11 +15,11 @@ efficient and has resulted in bugs and other issues. To improve the quality of m
 use, I have decided to add unit and integration tests and turn it into a system that can be easily installed in just 15 minutes. 
 This system is called USiteSearch.
 
-Earlier versions of the code used in USiteSearch can be seen in action on <a href="https://mysteriousuniverse.org/" target="_blank">Mysterious Universe</a> which has a total of 20,000 blog posts.
+Earlier versions of the code used in USiteSearch can be seen in action on [Mysterious Universe](https://mysteriousuniverse.org/) which has a total of 20,000 blog posts.
 
 ## Need an Umbraco developer?
 
-You can reach me at <a href="https://www.yart.com.au/capabilities/umbraco-developer/" target="_blank">my website</a>
+You can reach me at [my website](https://www.yart.com.au/capabilities/umbraco-developer/).
 
 ## Support
 
@@ -30,33 +30,31 @@ Contact me if you need support, this is free :-)
 Let's get **USiteSearch** working in a sample Umbraco website so you can see exactly how it works. Installing on the sample
 site will teach you how to install it in your own site. Set up should take no longer than 15 minutes.
 
-Note: This help can also be viewed as a <a href="https://youtu.be/wRQICwJ3EPY" target="_blank">YouTube tutorial</a> if 
-you prefer watching a video. 
+Note: This help can also be viewed as a [YouTube tutorial](https://youtu.be/wRQICwJ3EPY) if you prefer watching a video. 
 
 ### Installation steps
 
 We will install USiteSearch on an Umbraco 10 (or 11) website to show how it works.
 
-1. Clone this basic <a href="https://github.com/petrassurna/umbraco10samplesite.git" target="_blank">Umbraco 10 website</a>. 
-The website comes with an embedded database so it should run without further modifications. 
+1. Clone this basic [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git). The website comes with an embedded database so it should run without further modifications. 
 The back office login for the website is:
 
 	Username: admin@admin.com  
 	Password: admin12345
 
-	Alternatively clone the same website in <a href="https://github.com/petrassurna/umbraco11samplesite.git" target="_blank">Umbraco 11</a> if you are using Umbraco 11. Check the website runs and you can log in to the backoffice.
+	Alternatively clone the same website in [Umbraco 11 website](https://github.com/petrassurna/umbraco11samplesite.git) if you are using Umbraco 11. Check the website runs and you can log in to the backoffice.
 
 2. Install the latest nuget USiteSearch package via the NuGet package manager:
 
-	<img src="https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg" style="height:500px">
+![nuget install](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg)
 
+3. Unzip this zip file [site files](https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.651.zip)
 
-3. Install https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.651.zip  
    Unzip the files in the *project folder*.
 
-	This installs some css, images, javascript and a partial view. The files it installs are show below:
+	 This installs some css, images, javascript and a partial view. The files it installs are show below:
 
-	<img src="https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg" style="height:500px">
+	 ![setup sample](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
 
 4. Run the project to view the sample website. Now let's add *USiteSearch*.
    'Open startup.cs and add these three using statements at the top of the file:
@@ -153,4 +151,4 @@ This has been done for you in *master.cshtml*:
 
 	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/block-from-search.jpg)
 
-	This is already present in the sample project and when you check it on, pages will be removed from the search if you save them after checking the option.
+	This is already present in the sample project and when you check it on, pages will be removed from the search if you resave them after checking the option.
