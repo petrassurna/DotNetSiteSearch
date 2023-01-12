@@ -1,0 +1,49 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AddOnPackagesRequiredForUmbracoCloud": [],
+  "AlternatePackageNames": [],
+  "AuthorDetails": {
+    "Name": "Petras Surna",
+    "Description": "Umbraco developer since 2009",
+    "Url": "https://www.yart.com.au/capabilities/umbraco-developer/",
+    "ImageUrl": "https://raw.githubusercontent.com/petrassurna/USiteSearch/main/USiteSearch/images/Petras.png",
+    "Contributors": [
+      {
+        "Name": "Petras Surna",
+        "Url": "https://www.yart.com.au/capabilities/umbraco-developer/"
+      }
+    ],
+
+    "SyncContributorsFromRepository": "true|false"
+  },
+  "Category": "Search",
+  "Description": "Add a front end site search to your Umbraco website in 15 minutes",
+  "DiscussionForumUrl": "https://github.com/petrassurna/USiteSearch/issues",
+  "DocumentationUrl": "https://github.com/petrassurna/USiteSearch/tree/main",
+  "LicenseTypes": [ "Free" ],
+  "IssueTrackerUrl": "https://github.com/petrassurna/USiteSearch/issues",
+  "IsSubPackageOf": "",
+  "PackageType": "Package",
+  "PackagesByAuthor": [],
+  "RelatedPackages": [
+    {
+      "PackageId": "",
+      "Description": ""
+    }
+  ],
+  "Screenshots": [
+    {
+      "ImageUrl": "https://github.com/petrassurna/USiteSearch/blob/main/USiteSearch/images/search-animals.jpg",
+      "Caption": "Search results appear as you type"
+    }
+  ],
+  "Tags": ["website", "search"],
+  "Title": "USiteSearch",
+  "VersionSpecificPackageIds": [
+    {
+      "UmbracoMajorVersion": 11,
+      "PackageId": ""
+    }
+  ],
+  "VideoUrl": "https://youtu.be/wRQICwJ3EPY"
+}
