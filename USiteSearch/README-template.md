@@ -1,10 +1,5 @@
 ## Add full text search to your Umbraco website in 15 minutes flat
 
-VERSION.nupkg  
-This version can be installed and works!
-
-## Why Create USiteSearch?
-
 I build websites using the Umbraco content management system, and one feature that is often necessary 
 is a site search. While you can use Examine for this purpose, my sites often require a Google-like search 
 rather than a search specific to the site's content. Additionally, I need a user-friendly interface for 
@@ -46,7 +41,7 @@ The back office login for the website is:
 
 2. Install the latest nuget USiteSearch package via the NuGet package manager:
 
-![nuget install](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg)
+	![nuget install](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg)
 
 3. Unzip this zip file [site files](https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-VERSION.zip)
 
@@ -93,8 +88,7 @@ The back office login for the website is:
 	Read more about [Umbraco Bundling](https://docs.umbraco.com/umbraco-cms/fundamentals/design/stylesheets-javascript#bundling-and-minification-for-javascript-and-css)
 
 
-5. Next we need to enable the css and javascript used by USiteSearch. 
-Add these lines in *views/master.cshtml* in the *head* section:
+5. Next we need to enable the css and javascript used by USiteSearch. Add these lines in *views/master.cshtml* in the *head* section:
 
 	```
 	<link rel="stylesheet" href="usitesearch-css-bundle" />
