@@ -13,7 +13,7 @@
 		<owners>Petras Surna</owners>
 
 		<!-- Project URL provides a link for the gallery -->
-		<projectUrl>https://github.com/petrassurna/dotnetsitesearch</projectUrl>
+		<projectUrl>https://github.com/petrassurna/usitesearch</projectUrl>
 
 		<!-- License information is displayed on the gallery -->
 		<license type="expression">AGPL-3.0-or-later</license>
@@ -41,7 +41,7 @@
 		<copyright>Copyright ©2022-2023 Yart Pty Ltd</copyright>
 
 		<!-- Tags appear in the gallery and can be used for tag searches -->
-		<tags>Umbraco, website, search</tags>
+		<tags>umbraco-marketplace, Umbraco, website, search</tags>
 
 		<!-- Dependencies are automatically installed when the package is installed -->
 		<dependencies>
