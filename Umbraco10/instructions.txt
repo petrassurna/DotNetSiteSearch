@@ -1,11 +1,13 @@
 ﻿How to build nuget packages
 ---------------------------
 
-1. Change USiteSearch project properties in Package > General > Package Version to the latest version e.g. 0.651
+1. Change USiteSearch project properties in Package > General > Package Version to the latest version e.g. 0.652
 
-2. Change the nupkg <releaseNotes>0.651 - readme updates, package ready for your use!</releaseNotes>
+2. Change the nupkg <releaseNotes>0.652 - readme updates, package ready for your use!</releaseNotes>
 
 3. Add the generated zip files in /nuget to git
+
+4. Commit and push.
 
 
 
