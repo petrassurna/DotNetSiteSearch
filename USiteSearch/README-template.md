@@ -52,7 +52,7 @@ The back office login for the website is:
 	 ![setup sample](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
 
 4. Run the project to view the sample website. Now let's add *USiteSearch*.
-   'Open startup.cs and add these three using statements at the top of the file:
+   Open startup.cs and add this using statement at the top of the file:
 
 	```
 	using Umbraco.Cms.Core.Notifications;
