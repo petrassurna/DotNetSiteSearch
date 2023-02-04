@@ -15,7 +15,7 @@ if (Environment.GetCommandLineArgs().Length > 1)
 
 string folder = Path.GetDirectoryName(Environment.ProcessPath) ?? "";
 
-string pathToUSiteSearch = $"{folder}\\..\\..\\..\\..\\USiteSearch\\";
+string pathToUSiteSearch = $"{folder}\\..\\..\\..\\..\\SiteSearch.USiteSearch\\";
 string pathToSolution = $"{folder}\\..\\..\\..\\..\\";
 string template = $"{pathToUSiteSearch}README-template.md";
 

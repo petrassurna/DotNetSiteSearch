@@ -11,7 +11,7 @@
     <Description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</Description>
     <PackageTags>Umbraco,website,search</PackageTags>
     <PackageId>USiteSearch</PackageId>
-    <PackageOutputPath>C:\Yart\Clients and Jobs\DotNetSiteSearch\source\nuget</PackageOutputPath>
+    <PackageOutputPath>($SolutionDir)SiteSearch.USiteSearch.nuget\nuget</PackageOutputPath>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright Yart 2023</Copyright>
@@ -87,8 +87,8 @@
   
 
   <ItemGroup>
-    <ProjectReference Include="..\LuceneSearch\LuceneSearch.csproj" />
-    <ProjectReference Include="..\Searchable\Searchable.csproj" />
+    <ProjectReference Include="..\SiteSearch.LuceneSearch\LuceneSearch.csproj" />
+    <ProjectReference Include="..\SiteSearch.Searchable\Searchable.csproj" />
   </ItemGroup>
   
   
@@ -130,7 +130,7 @@
   
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)nuget\zip-file-frontend.bat&quot; $(Version)" />
+    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat&quot; $(Version) &quot;$(SolutionDir)&quot;" />
   </Target>
 
 </Project>

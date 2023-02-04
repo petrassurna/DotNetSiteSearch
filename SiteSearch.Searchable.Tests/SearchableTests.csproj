@@ -18,9 +18,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LuceneSearch\LuceneSearch.csproj" />
-    <ProjectReference Include="..\LuceneSearcn.Tests\LuceneSearch.Tests.csproj" />
-    <ProjectReference Include="..\Searchable\Searchable.csproj" />
+    <ProjectReference Include="..\SiteSearch.LuceneSearch.Tests\LuceneSearch.Tests.csproj" />
+    <ProjectReference Include="..\SiteSearch.LuceneSearch\LuceneSearch.csproj" />
+    <ProjectReference Include="..\SiteSearch.Searchable\Searchable.csproj" />
   </ItemGroup>
 
 </Project>

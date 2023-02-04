@@ -14,7 +14,7 @@
   <ItemGroup>
     <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
     <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
-    <ProjectReference Include="..\USiteSearch\USiteSearch.csproj" />
+    <ProjectReference Include="..\SiteSearch.USiteSearch\USiteSearch.csproj" />
     <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
   </ItemGroup>
 
@@ -31,11 +31,11 @@
   </PropertyGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)FrontEndSampleSite\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y" />
+    <Exec Command="xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.Frontend\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.Frontend\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.Frontend\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.Frontend\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.Frontend\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.Frontend\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y" />
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)\USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force" />
+    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\SiteSearch.USiteSearch.nuget -Force" />
   </Target>
 
 </Project>

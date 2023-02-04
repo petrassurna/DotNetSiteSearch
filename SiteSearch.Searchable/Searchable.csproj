@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TextFormatting\TextFormatting.csproj" />
+    <ProjectReference Include="..\SiteSearch.TextFormatting\TextFormatting.csproj" />
   </ItemGroup>
 
 </Project>
