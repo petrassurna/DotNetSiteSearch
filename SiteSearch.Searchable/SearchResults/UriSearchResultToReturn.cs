@@ -1,7 +1,4 @@
-﻿using Searchable.Stemming;
-using System.Text.RegularExpressions;
-
-namespace Searchable.SearchResults
+﻿namespace SiteSearch.Searchable.SearchResults
 {
   public class UriSearchResultToReturn
   {

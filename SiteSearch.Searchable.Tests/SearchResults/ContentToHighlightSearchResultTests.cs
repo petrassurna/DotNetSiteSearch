@@ -1,13 +1,13 @@
 ﻿using Lucene.Net.Store;
-using LuceneSearch;
+using SiteSearch.LuceneSearch;
 using Searchable;
-using Searchable.SearchableContent;
-using Searchable.SearchableContent.Factories;
-using Searchable.SearchResults.Factories;
-using Searchable.Stemming;
 using Shouldly;
+using SiteSearch.Searchable.Stemming;
+using SiteSearch.Searchable.SearchableContent;
+using SiteSearch.Searchable.SearchableContent.Factories;
+using SiteSearch.Searchable.SearchResults.Factories;
 
-namespace SearchableTests
+namespace SiteSearch.Searchable.Tests
 {
   public class ContentToHighlightSearchResultTests
   {

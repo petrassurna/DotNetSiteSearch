@@ -5,7 +5,7 @@ using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Web.Common;
 
-namespace USiteSearch.Notifications
+namespace SiteSearch.USiteSearch.Notifications
 {
   public class UnpublishedNotification : BaseNotification, INotificationHandler<ContentUnpublishedNotification>
   {

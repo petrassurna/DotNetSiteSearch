@@ -1,13 +1,13 @@
 ﻿using Lucene.Net.Store;
-using LuceneSearch;
 using Searchable;
-using Searchable.SearchableContent;
-using Searchable.SearchableContent.Factories;
-using Searchable.SearchResults.Factories;
-using Searchable.Stemming;
 using Shouldly;
+using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.SearchableContent;
+using SiteSearch.Searchable.SearchableContent.Factories;
+using SiteSearch.Searchable.SearchResults.Factories;
+using SiteSearch.Searchable.Stemming;
 
-namespace SearchableTests
+namespace SiteSearch.Searchable.Tests
 {
   public class MultipleSearchTermsInMatchTests
   {

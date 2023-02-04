@@ -1,6 +1,4 @@
-﻿using Searchable.SearchResults.Adjoinings;
-
-namespace Searchable.SearchResults.Factories
+﻿namespace SiteSearch.Searchable.SearchResults.Factories
 {
 
   public class WordsAfter

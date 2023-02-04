@@ -1,13 +1,13 @@
-﻿using LuceneSearch;
-using Searchable;
-using Searchable.SearchResults;
-using Searchable.SearchResults.Factories;
-using Searchable.Stemming;
+﻿using Searchable;
+using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.SearchResults;
+using SiteSearch.Searchable.SearchResults.Factories;
+using SiteSearch.Searchable.Stemming;
 using Umbraco.Cms.Web.Common.Controllers;
 
 namespace USiteSearch
 {
-    public class USiteSearchController : UmbracoApiController
+  public class USiteSearchController : UmbracoApiController
   {
     ISearchProvider _provider;
 

@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Text.RegularExpressions;
 
-namespace TextFormatting
+namespace SiteSearch.TextFormatting
 {
   public static class TagStripper
   {

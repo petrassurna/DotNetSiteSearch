@@ -1,4 +1,4 @@
-﻿using Searchable.SearchableContent;
+﻿using SiteSearch.Searchable.SearchableContent;
 
 namespace Searchable
 {

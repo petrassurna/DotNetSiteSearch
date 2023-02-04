@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using TextFormatting;
+using SiteSearch.TextFormatting;
 
-namespace TextFormattingTests
+namespace SiteSearch.TextFormatting.Tests
 {
   [TestClass]
   public class HighlighterTests

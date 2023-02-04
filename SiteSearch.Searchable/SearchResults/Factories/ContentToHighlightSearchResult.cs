@@ -1,7 +1,7 @@
-﻿using Searchable.SearchableContent;
-using Searchable.Stemming;
+﻿using Searchable;
+using SiteSearch.Searchable.Stemming;
 
-namespace Searchable.SearchResults.Factories
+namespace SiteSearch.Searchable.SearchResults.Factories
 {
   public class ContentToHighlightSearchResult
   {

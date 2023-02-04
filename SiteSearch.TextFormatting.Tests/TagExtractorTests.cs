@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using TextFormatting;
+using SiteSearch.TextFormatting;
 
-namespace TextFormattingTests
+namespace SiteSearch.TextFormatting.Tests
 {
   [TestClass]
   public class TagExtractorTests

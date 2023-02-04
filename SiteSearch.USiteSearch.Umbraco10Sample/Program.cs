@@ -1,4 +1,4 @@
-namespace Umbraco10
+namespace SiteSearch.USiteSearch.Umbraco10Sample
 {
   public class Program
   {

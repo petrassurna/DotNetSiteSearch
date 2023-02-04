@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Searchable.SearchableContent
+namespace SiteSearch.Searchable.SearchableContent
 {
   public abstract class ContentField
   {

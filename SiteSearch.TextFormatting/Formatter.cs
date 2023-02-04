@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 
 
-namespace TextFormatting
+namespace SiteSearch.TextFormatting
 {
   public class Formatter
   {

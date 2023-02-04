@@ -4,9 +4,9 @@ using System.Linq;
 using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
-using TextFormatting;
+using SiteSearch.TextFormatting;
 
-namespace Searchable.WebPages.Factories
+namespace SiteSearch.Searchable.WebPages.Factories
 {
   public class WebPageDataToTitle
   {

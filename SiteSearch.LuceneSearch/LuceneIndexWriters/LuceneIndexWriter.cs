@@ -2,11 +2,11 @@
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.Util;
-using Searchable.SearchableContent;
+using SiteSearch.Searchable.SearchableContent;
 using System;
 using Directory = Lucene.Net.Store.Directory;
 
-namespace LuceneSearch.LuceneIndexWriters
+namespace SiteSearch.LuceneSearch.LuceneIndexWriters
 {
   internal abstract class LuceneIndexWriter : IDisposable
   {

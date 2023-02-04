@@ -1,14 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Searchable;
-using Searchable.WebPages.Factories;
 using Umbraco.Cms.Core.Events;
-using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Web.Common;
 
 
-namespace USiteSearch.Notifications
+namespace SiteSearch.USiteSearch.Notifications
 {
   public class MovedNotification : BaseNotification, INotificationHandler<ContentMovedNotification>
   {

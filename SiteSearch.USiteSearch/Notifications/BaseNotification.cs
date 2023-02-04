@@ -1,15 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Searchable;
-using Searchable.SearchableContent;
-using Searchable.SearchableContent.Factories;
-using Searchable.WebPages.Factories;
+using SiteSearch.Searchable.SearchableContent.Factories;
+using SiteSearch.Searchable.WebPages.Factories;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Web.Common;
 using Umbraco.Extensions;
-using Content = Searchable.SearchableContent.Content;
 
-namespace USiteSearch.Notifications
+namespace SiteSearch.USiteSearch.Notifications
 {
   public class BaseNotification
   {
@@ -41,7 +39,7 @@ namespace USiteSearch.Notifications
 
       if (!PageBlocked(content))
       {
-        Searchable.SearchableContent.Content webPage = UriToWebPage.GetWebPage(content.Id, new Uri(url), _clientFactory).Result;
+        SiteSearch.Searchable.SearchableContent.Content webPage = UriToWebPage.GetWebPage(content.Id, new Uri(url), _clientFactory).Result;
 
         if (!webPage.IsEmpty())
         {
@@ -57,7 +55,7 @@ namespace USiteSearch.Notifications
 
     protected void Delete(int contentId)
     {
-      Content toUnpublish = ContentFactory.WebPage(contentId.ToString(), "", "", "");
+      SiteSearch.Searchable.SearchableContent.Content toUnpublish = ContentFactory.WebPage(contentId.ToString(), "", "", "");
       _Provider.Delete(toUnpublish);
     }
 

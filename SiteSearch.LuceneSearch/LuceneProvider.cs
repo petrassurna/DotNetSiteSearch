@@ -2,16 +2,14 @@
 using Lucene.Net.Analysis.En;
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Store;
-using Lucene.Net.Tartarus.Snowball.Ext;
 using Lucene.Net.Util;
-using LuceneSearch.LuceneIndexWriters;
 using Searchable;
-using Searchable.SearchableContent;
-using Searchable.SearchableContent.Factories;
-using System;
+using SiteSearch.LuceneSearch.LuceneIndexWriters;
+using SiteSearch.Searchable.SearchableContent;
+using SiteSearch.Searchable.SearchableContent.Factories;
 using System.Collections.Generic;
 
-namespace LuceneSearch
+namespace SiteSearch.LuceneSearch
 {
   public class LuceneProvider : ISearchProvider
   {

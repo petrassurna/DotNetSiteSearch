@@ -7,7 +7,7 @@ using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 
-namespace TextFormatting
+namespace SiteSearch.TextFormatting
 {
   public class WebPageExtracter
   {

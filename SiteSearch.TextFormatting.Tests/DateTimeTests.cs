@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TextFormatting;
+using SiteSearch.TextFormatting;
 
-namespace TextFormattingTests
+namespace SiteSearch.TextFormatting.Tests
 {
   [TestClass]
   public class DateTimeTests

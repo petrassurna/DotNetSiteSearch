@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace TextFormatting
+namespace SiteSearch.TextFormatting
 {
   public class TagExtractor
   {

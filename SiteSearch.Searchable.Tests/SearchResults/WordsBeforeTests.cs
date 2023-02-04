@@ -1,7 +1,7 @@
-﻿using Searchable.SearchResults.Factories;
-using Shouldly;
+﻿using Shouldly;
+using SiteSearch.Searchable.SearchResults.Factories;
 
-namespace SearchableTests.SearchResults
+namespace SiteSearch.Searchable.Tests.SearchResults
 {
   public class WordsBeforeTest1
   {

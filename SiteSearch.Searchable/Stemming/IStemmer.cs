@@ -1,4 +1,4 @@
-﻿namespace Searchable.Stemming
+﻿namespace SiteSearch.Searchable.Stemming
 {
   public interface IStemmer
   {

@@ -1,10 +1,10 @@
-﻿using LuceneSearch;
-using Searchable.SearchResults;
-using Searchable.SearchResults.Factories;
-using Searchable.Stemming;
-using Shouldly;
+﻿using Shouldly;
+using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.SearchResults;
+using SiteSearch.Searchable.SearchResults.Factories;
+using SiteSearch.Searchable.Stemming;
 
-namespace SearchableTests
+namespace SiteSearch.Searchable.Tests
 {
   public class TextToWordMatchesTests
   {

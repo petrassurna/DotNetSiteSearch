@@ -1,7 +1,6 @@
-using Searchable.SearchableContent;
-using Searchable.WebPages;
-using Searchable.WebPages.Factories;
-using SearchableTests;
+using SiteSearch.Searchable.SearchableContent;
+using SiteSearch.Searchable.Tests;
+using SiteSearch.Searchable.WebPages.Factories;
 
 namespace WebPageLibraryTests
 {

@@ -1,12 +1,11 @@
 using Searchable;
-using LuceneSearch;
 using Shouldly;
-using Searchable.SearchableContent.Factories;
-using Searchable.SearchableContent;
-using LuceneSearch.Tests;
 using Lucene.Net.Store;
+using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.SearchableContent.Factories;
+using SiteSearch.Searchable.SearchableContent;
 
-namespace LuceneSearcn.Tests
+namespace SiteSearch.LuceneSearcn.Tests
 {
   public class SearchAccuracyTests
   {

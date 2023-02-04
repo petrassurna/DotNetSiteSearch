@@ -1,9 +1,9 @@
 ﻿using Lucene.Net.Documents;
-using Searchable.SearchableContent;
+using SiteSearch.Searchable.SearchableContent;
 using Field = Lucene.Net.Documents.Field;
 
 
-namespace LuceneSearch.Factories
+namespace SiteSearch.LuceneSearch.Factories
 {
   public class ContentToDocument
   {

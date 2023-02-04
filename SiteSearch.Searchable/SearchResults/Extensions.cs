@@ -1,9 +1,6 @@
-﻿
+﻿using SiteSearch.Searchable.Stemming;
 
-using Searchable.Stemming;
-using System.Runtime.CompilerServices;
-
-namespace Searchable.SearchResults
+namespace SiteSearch.Searchable.SearchResults
 {
   public static class Extensions
   {

@@ -1,7 +1,6 @@
-﻿using Searchable.Stemming;
-using System.Text.RegularExpressions;
+﻿using SiteSearch.Searchable.Stemming;
 
-namespace Searchable.SearchResults.Factories
+namespace SiteSearch.Searchable.SearchResults.Factories
 {
 
   public class TextToWordMatch

@@ -1,7 +1,6 @@
-﻿using Searchable.Stemming;
+﻿using SiteSearch.Searchable.Stemming;
 
-
-namespace Searchable.SearchResults.Adjoinings
+namespace SiteSearch.Searchable.SearchResults.Adjoinings
 {
   public class WordList : List<string>
   {

@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SiteSearch.Searchable\Searchable.csproj" />
-    <ProjectReference Include="..\SiteSearch.TextFormatting\TextFormatting.csproj" />
+    <ProjectReference Include="..\SiteSearch.Searchable\SiteSearch.Searchable.csproj" />
+    <ProjectReference Include="..\SiteSearch.TextFormatting\SiteSearch.TextFormatting.csproj" />
   </ItemGroup>
 
 </Project>

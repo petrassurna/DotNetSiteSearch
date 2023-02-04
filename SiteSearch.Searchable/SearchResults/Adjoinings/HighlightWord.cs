@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Searchable.SearchResults.Adjoinings
+namespace SiteSearch.Searchable.SearchResults.Adjoinings
 {
   public class HighlightWord
   {

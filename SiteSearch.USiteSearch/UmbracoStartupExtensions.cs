@@ -1,11 +1,10 @@
-﻿using LuceneSearch;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Searchable;
+using SiteSearch.LuceneSearch;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Notifications;
-using Umbraco.Cms.Core.Services;
 
-namespace USiteSearch.Notifications
+namespace SiteSearch.USiteSearch.Notifications
 {
   public static class UmbracoStartupExtensions
   {

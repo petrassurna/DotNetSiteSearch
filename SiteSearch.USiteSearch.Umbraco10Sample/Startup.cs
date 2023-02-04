@@ -1,9 +1,8 @@
 using UmbracoExtensions;
 using Umbraco.Cms.Core.Notifications;
+using SiteSearch.USiteSearch.Notifications;
 
-using USiteSearch.Notifications;
-
-namespace Umbraco10
+namespace SiteSearch.USiteSearch.Umbraco10Sample
 {
   public class Startup
   {

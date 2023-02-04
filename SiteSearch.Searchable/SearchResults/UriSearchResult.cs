@@ -1,6 +1,6 @@
-﻿using Searchable.Stemming;
+﻿using SiteSearch.Searchable.Stemming;
 
-namespace Searchable.SearchResults
+namespace SiteSearch.Searchable.SearchResults
 {
   public class UriSearchResult
   {

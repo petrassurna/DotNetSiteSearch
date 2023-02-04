@@ -1,4 +1,4 @@
-using Searchable.WebPages.Factories;
+using SiteSearch.Searchable.WebPages.Factories;
 
 namespace WebPageLibraryTests
 {

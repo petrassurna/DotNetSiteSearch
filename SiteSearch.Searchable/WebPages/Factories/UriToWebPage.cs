@@ -1,10 +1,8 @@
-﻿using Searchable.SearchableContent;
-using Searchable.SearchableContent.Factories;
-using System.Net;
-using System.Net.Http;
-using TextFormatting;
+﻿using SiteSearch.TextFormatting;
+using SiteSearch.Searchable.SearchableContent;
+using SiteSearch.Searchable.SearchableContent.Factories;
 
-namespace Searchable.WebPages.Factories
+namespace SiteSearch.Searchable.WebPages.Factories
 {
   public class UriToWebPage
   {

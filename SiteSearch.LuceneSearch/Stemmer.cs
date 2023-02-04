@@ -1,13 +1,8 @@
 ﻿using Lucene.Net.Tartarus.Snowball.Ext;
 using PluralizeService.Core;
-using Searchable.Stemming;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using SiteSearch.Searchable.Stemming;
 
-namespace LuceneSearch
+namespace SiteSearch.LuceneSearch
 {
   public class Stemmer : IStemmer
   {

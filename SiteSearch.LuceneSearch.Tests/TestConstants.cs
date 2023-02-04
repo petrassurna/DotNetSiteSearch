@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LuceneSearch.Tests
+namespace SiteSearch.LuceneSearcn.Tests
 {
   public class TestConstants
   {

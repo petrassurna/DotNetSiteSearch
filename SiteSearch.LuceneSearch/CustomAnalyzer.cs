@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LuceneSearch
+namespace SiteSearch.LuceneSearch
 {
 
 

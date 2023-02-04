@@ -4,18 +4,16 @@ using Lucene.Net.Index;
 using Lucene.Net.QueryParsers.Classic;
 using Lucene.Net.Search;
 using Lucene.Net.Util;
-using LuceneSearch.LuceneIndexWriters;
 using Searchable;
-using Searchable.SearchableContent;
+using SiteSearch.LuceneSearch.LuceneIndexWriters;
+using SiteSearch.Searchable.SearchableContent;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using TextFormatting;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace LuceneSearch
+namespace SiteSearch.LuceneSearch
 {
   internal class LuceneSearcher : IDisposable
   {

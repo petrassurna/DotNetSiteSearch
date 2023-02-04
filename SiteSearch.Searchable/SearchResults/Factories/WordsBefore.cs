@@ -1,9 +1,7 @@
-﻿using Searchable.SearchResults.Adjoinings;
-
-namespace Searchable.SearchResults.Factories
+﻿namespace SiteSearch.Searchable.SearchResults.Factories
 {
 
-    public class WordsBefore
+  public class WordsBefore
   {
 
     public static AdjoiningWords Get(string content, int index, int words)

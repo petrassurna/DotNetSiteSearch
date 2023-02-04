@@ -1,11 +1,6 @@
-﻿using Searchable.Stemming;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SiteSearch.Searchable.Stemming;
 
-namespace Searchable.SearchResults.Factories
+namespace SiteSearch.Searchable.SearchResults.Factories
 {
   public class TextToWordMatches
   {

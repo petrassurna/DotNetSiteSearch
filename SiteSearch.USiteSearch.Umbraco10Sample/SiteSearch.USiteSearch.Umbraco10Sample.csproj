@@ -14,7 +14,7 @@
   <ItemGroup>
     <!-- Opt-in to app-local ICU to ensure consistent globalization APIs across different platforms -->
     <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="68.2.0.9" />
-    <ProjectReference Include="..\SiteSearch.USiteSearch\USiteSearch.csproj" />
+    <ProjectReference Include="..\SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj" />
     <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="68.2.0.9" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))" />
   </ItemGroup>
 
@@ -35,7 +35,7 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\SiteSearch.USiteSearch.nuget -Force" />
+    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\SiteSearch.USiteSearch.nuget -Force" />
   </Target>
 
 </Project>

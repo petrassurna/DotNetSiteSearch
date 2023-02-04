@@ -1,6 +1,4 @@
-﻿using Searchable.SearchableContent;
-
-namespace Searchable.SearchableContent.Factories
+﻿namespace SiteSearch.Searchable.SearchableContent.Factories
 {
   public class ContentFactory
   {

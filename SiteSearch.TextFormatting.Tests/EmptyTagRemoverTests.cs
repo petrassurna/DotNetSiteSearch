@@ -1,8 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TextFormatting;
+using SiteSearch.TextFormatting;
 
-namespace TextFormattingTests
+namespace SiteSearch.TextFormatting.Tests
 {
   [TestClass]
   public class EmptyTagRemoverTests

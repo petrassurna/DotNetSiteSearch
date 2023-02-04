@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace TextFormattingTests
+namespace SiteSearch.TextFormatting.Tests
 {
   [TestClass]
   public class LinkWrapperTests1
