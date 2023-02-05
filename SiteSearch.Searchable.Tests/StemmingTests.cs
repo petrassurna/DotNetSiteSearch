@@ -1,6 +1,6 @@
 using Shouldly;
-using SiteSearch.LuceneSearch;
 using Searchable;
+using SiteSearch.Searchable.LuceneSearch;
 
 namespace WebPageLibraryTests
 {

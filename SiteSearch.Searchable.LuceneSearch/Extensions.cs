@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Lucene.Net.Analysis.TokenAttributes;
 
 
-namespace SiteSearch.LuceneSearch
+namespace SiteSearch.Searchable.LuceneSearch
 {
   public static class Extensions
   {

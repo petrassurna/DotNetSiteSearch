@@ -4,13 +4,13 @@ using Lucene.Net.Documents;
 using Lucene.Net.Index;
 using Lucene.Net.QueryParsers.Classic;
 using Lucene.Net.Util;
-using SiteSearch.LuceneSearch.Factories;
-using SiteSearch.LuceneSearch.LuceneIndexWriters;
+using SiteSearch.Searchable.LuceneSearch.Factories;
+using SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters;
 using SiteSearch.Searchable.SearchableContent;
 using System;
 using System.Linq;
 
-namespace SiteSearch.LuceneSearch
+namespace SiteSearch.Searchable.LuceneSearch
 {
   internal class LuceneIndexer : IDisposable
   {

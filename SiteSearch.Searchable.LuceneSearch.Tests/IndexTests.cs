@@ -1,9 +1,9 @@
 using Searchable;
 using Shouldly;
 using Lucene.Net.Store;
-using SiteSearch.LuceneSearch;
 using SiteSearch.Searchable.SearchableContent;
 using SiteSearch.Searchable.SearchableContent.Factories;
+using SiteSearch.Searchable.LuceneSearch;
 
 namespace SiteSearch.LuceneSearcn.Tests
 {

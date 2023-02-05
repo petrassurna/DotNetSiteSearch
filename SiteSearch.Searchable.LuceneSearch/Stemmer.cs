@@ -2,7 +2,7 @@
 using PluralizeService.Core;
 using SiteSearch.Searchable.Stemming;
 
-namespace SiteSearch.LuceneSearch
+namespace SiteSearch.Searchable.LuceneSearch
 {
   public class Stemmer : IStemmer
   {

@@ -1,11 +1,11 @@
 ﻿using Lucene.Net.Store;
-using SiteSearch.LuceneSearch;
 using Searchable;
 using Shouldly;
 using SiteSearch.Searchable.Stemming;
 using SiteSearch.Searchable.SearchableContent;
 using SiteSearch.Searchable.SearchableContent.Factories;
 using SiteSearch.Searchable.SearchResults.Factories;
+using SiteSearch.Searchable.LuceneSearch;
 
 namespace SiteSearch.Searchable.Tests
 {

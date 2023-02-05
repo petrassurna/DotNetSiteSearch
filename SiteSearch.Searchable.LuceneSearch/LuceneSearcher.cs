@@ -5,7 +5,7 @@ using Lucene.Net.QueryParsers.Classic;
 using Lucene.Net.Search;
 using Lucene.Net.Util;
 using Searchable;
-using SiteSearch.LuceneSearch.LuceneIndexWriters;
+using SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters;
 using SiteSearch.Searchable.SearchableContent;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace SiteSearch.LuceneSearch
+namespace SiteSearch.Searchable.LuceneSearch
 {
   internal class LuceneSearcher : IDisposable
   {

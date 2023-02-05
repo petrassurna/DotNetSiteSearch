@@ -4,12 +4,12 @@ using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Store;
 using Lucene.Net.Util;
 using Searchable;
-using SiteSearch.LuceneSearch.LuceneIndexWriters;
+using SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters;
 using SiteSearch.Searchable.SearchableContent;
 using SiteSearch.Searchable.SearchableContent.Factories;
 using System.Collections.Generic;
 
-namespace SiteSearch.LuceneSearch
+namespace SiteSearch.Searchable.LuceneSearch
 {
   public class LuceneProvider : ISearchProvider
   {

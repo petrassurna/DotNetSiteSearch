@@ -1,7 +1,7 @@
 ﻿using Lucene.Net.Store;
 using Searchable;
 using Shouldly;
-using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.LuceneSearch;
 using SiteSearch.Searchable.SearchableContent;
 using SiteSearch.Searchable.SearchableContent.Factories;
 using SiteSearch.Searchable.SearchResults.Factories;

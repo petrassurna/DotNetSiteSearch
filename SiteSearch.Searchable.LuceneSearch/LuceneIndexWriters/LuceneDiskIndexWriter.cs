@@ -4,7 +4,7 @@ using Lucene.Net.Store;
 using Lucene.Net.Util;
 using System.IO;
 
-namespace SiteSearch.LuceneSearch.LuceneIndexWriters
+namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
 {
   internal class LuceneDiskIndexWriter : LuceneIndexWriter
   {

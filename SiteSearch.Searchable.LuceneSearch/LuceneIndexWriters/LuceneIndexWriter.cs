@@ -6,7 +6,7 @@ using SiteSearch.Searchable.SearchableContent;
 using System;
 using Directory = Lucene.Net.Store.Directory;
 
-namespace SiteSearch.LuceneSearch.LuceneIndexWriters
+namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
 {
   internal abstract class LuceneIndexWriter : IDisposable
   {

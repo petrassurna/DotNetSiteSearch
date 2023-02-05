@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Searchable;
-using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.LuceneSearch;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Notifications;
 

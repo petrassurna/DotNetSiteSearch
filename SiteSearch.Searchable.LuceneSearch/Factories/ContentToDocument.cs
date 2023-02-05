@@ -3,7 +3,7 @@ using SiteSearch.Searchable.SearchableContent;
 using Field = Lucene.Net.Documents.Field;
 
 
-namespace SiteSearch.LuceneSearch.Factories
+namespace SiteSearch.Searchable.LuceneSearch.Factories
 {
   public class ContentToDocument
   {

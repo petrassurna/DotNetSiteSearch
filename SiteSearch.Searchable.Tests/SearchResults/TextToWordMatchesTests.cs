@@ -1,5 +1,5 @@
 ﻿using Shouldly;
-using SiteSearch.LuceneSearch;
+using SiteSearch.Searchable.LuceneSearch;
 using SiteSearch.Searchable.SearchResults;
 using SiteSearch.Searchable.SearchResults.Factories;
 using SiteSearch.Searchable.Stemming;

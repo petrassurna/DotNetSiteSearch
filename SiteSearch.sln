@@ -5,10 +5,6 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94679360-9C61-46A9-AB4E-442B113A5E74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.LuceneSearch", "SiteSearch.LuceneSearch\SiteSearch.LuceneSearch.csproj", "{65904161-55DB-4E39-BF37-66095B7287B5}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.LuceneSearch.Tests", "SiteSearch.LuceneSearch.Tests\SiteSearch.LuceneSearch.Tests.csproj", "{AF9BDF29-19BC-40AA-B521-E943E0CB3B86}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch.PostBuildActions", "SiteSearch.USiteSearch.PostBuildActions\SiteSearch.USiteSearch.PostBuildActions.csproj", "{1368177D-8CFB-4736-92DF-C64CA72CE9A2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable", "SiteSearch.Searchable\SiteSearch.Searchable.csproj", "{BD22BF84-8519-4F5A-8AED-CC732C3879E4}"
@@ -23,20 +19,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch.Umbraco10Sample", "SiteSearch.USiteSearch.Umbraco10Sample\SiteSearch.USiteSearch.Umbraco10Sample.csproj", "{DDEC23AD-8A8B-45FB-8C49-2227505726FE}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.LuceneSearch", "SiteSearch.Searchable.LuceneSearch\SiteSearch.Searchable.LuceneSearch.csproj", "{162BA66B-9C06-4B56-B3E1-8BABFFF1F247}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.LuceneSearch.Tests", "SiteSearch.Searchable.LuceneSearch.Tests\SiteSearch.LuceneSearch.Tests.csproj", "{2564CD20-BD32-473F-B2AB-BE2138B606FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{65904161-55DB-4E39-BF37-66095B7287B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65904161-55DB-4E39-BF37-66095B7287B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65904161-55DB-4E39-BF37-66095B7287B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65904161-55DB-4E39-BF37-66095B7287B5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF9BDF29-19BC-40AA-B521-E943E0CB3B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF9BDF29-19BC-40AA-B521-E943E0CB3B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF9BDF29-19BC-40AA-B521-E943E0CB3B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF9BDF29-19BC-40AA-B521-E943E0CB3B86}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1368177D-8CFB-4736-92DF-C64CA72CE9A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1368177D-8CFB-4736-92DF-C64CA72CE9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1368177D-8CFB-4736-92DF-C64CA72CE9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,6 +57,14 @@ Global
 		{DDEC23AD-8A8B-45FB-8C49-2227505726FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDEC23AD-8A8B-45FB-8C49-2227505726FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDEC23AD-8A8B-45FB-8C49-2227505726FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162BA66B-9C06-4B56-B3E1-8BABFFF1F247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162BA66B-9C06-4B56-B3E1-8BABFFF1F247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162BA66B-9C06-4B56-B3E1-8BABFFF1F247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162BA66B-9C06-4B56-B3E1-8BABFFF1F247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2564CD20-BD32-473F-B2AB-BE2138B606FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2564CD20-BD32-473F-B2AB-BE2138B606FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2564CD20-BD32-473F-B2AB-BE2138B606FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2564CD20-BD32-473F-B2AB-BE2138B606FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

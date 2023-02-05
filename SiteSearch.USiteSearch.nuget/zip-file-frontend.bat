@@ -6,8 +6,9 @@ echo %solutionDir%
 echo on
 
 del "%solutionDir%SiteSearch.USiteSearch.nuget\nuget\USiteSearchProjectFiles-%version%.zip"
-"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\Umbraco10\wwwroot\" 
-"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "C:\Yart\Clients and Jobs\dotnetsitesearch\source\USiteSearch\Umbraco10\Views\"
+
+"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "%solutionDir%\USiteSearch\Umbraco10\wwwroot\" 
+"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "%solutionDir%\USiteSearch\Umbraco10\Views\"
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" wwwroot\creativesuite
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" wwwroot\simplesite
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" wwwroot\dotnetsearch

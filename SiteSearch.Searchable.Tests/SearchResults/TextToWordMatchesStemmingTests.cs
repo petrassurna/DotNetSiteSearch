@@ -1,8 +1,8 @@
-﻿using SiteSearch.LuceneSearch;
-using Shouldly;
+﻿using Shouldly;
 using SiteSearch.Searchable.Stemming;
 using SiteSearch.Searchable.SearchResults;
 using SiteSearch.Searchable.SearchResults.Factories;
+using SiteSearch.Searchable.LuceneSearch;
 
 namespace SiteSearch.Searchable.Tests
 {

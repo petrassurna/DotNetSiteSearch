@@ -1,13 +1,13 @@
 using Searchable;
 using Shouldly;
 using Lucene.Net.Store;
-using SiteSearch.LuceneSearch;
 using SiteSearch.Searchable.SearchableContent.Factories;
 using SiteSearch.Searchable.SearchableContent;
+using SiteSearch.Searchable.LuceneSearch;
 
 namespace SiteSearch.LuceneSearcn.Tests
 {
-  public class SearchAccuracyStemming
+  public class SearchAccuracyTests
   {
 
     [SetUp]
@@ -234,12 +234,15 @@ namespace SiteSearch.LuceneSearcn.Tests
 
       using (ISearchProvider provider = new LuceneProvider(new RAMDirectory()))
       {
-        provider.Add(webPage);
         ContentField key = webPage.Key();
+        provider.KeyExists(key).ShouldBeFalse();
+
+        provider.Add(webPage);
         provider.KeyExists(key).ShouldBeTrue();
 
         provider.CleanUp();
       }
     }
+
   }
 }
