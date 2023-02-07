@@ -25,7 +25,7 @@ Contact me if you need support, this is free :-)
 Let's get **USiteSearch** working in a sample Umbraco website so you can see exactly how it works. Installing on the sample
 site will teach you how to install it in your own site. Set up should take no longer than 15 minutes.
 
-Note: This help can also be viewed as a [YouTube tutorial](https://youtu.be/wRQICwJ3EPY) if you prefer watching a video. 
+Note: This help can also be viewed as a [YouTube tutorial](https://www.yart.com.au/blog/usitesearch/) if you prefer watching a video. 
 
 ### Installation steps
 

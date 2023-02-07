@@ -5,7 +5,7 @@ using SiteSearch.Searchable.SearchableContent.Factories;
 using SiteSearch.Searchable.SearchableContent;
 using SiteSearch.Searchable.LuceneSearch;
 
-namespace SiteSearch.LuceneSearcn.Tests
+namespace SiteSearch.Searchable.LuceneSearcn.Tests
 {
   public class SearchAccuracyTests
   {

@@ -7,7 +7,7 @@ namespace Searchable
   /// At the time of writing there is a LuceneProivder but alternative providers
   /// such as Examine or AzureSearch could be implemented
   /// AzureSearch is intended to be developed at some stage as it is a more 
-  /// performanat alternative to Lucene for sites using multiple web servers 
+  /// performanat alternative for .NET for sites using multiple web servers 
   /// where Lucene doesn't work too well
   /// </summary>
   public interface ISearchProvider : IDisposable

@@ -8,7 +8,6 @@ namespace SiteSearch.USiteSearch.Notifications
 {
   public static class UmbracoStartupExtensions
   {
-
     public static IUmbracoBuilder AddUSiteSearch(this IUmbracoBuilder builder, IServiceCollection services, string path, int wordsEachSide)
     {
       builder.AddNotificationHandler<ContentPublishedNotification, PublishedNotification>();
@@ -21,8 +20,5 @@ namespace SiteSearch.USiteSearch.Notifications
 
       return builder;
     }
-
-
   }
 }
-

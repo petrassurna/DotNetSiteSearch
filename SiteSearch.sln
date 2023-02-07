@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch.Umbr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.LuceneSearch", "SiteSearch.Searchable.LuceneSearch\SiteSearch.Searchable.LuceneSearch.csproj", "{162BA66B-9C06-4B56-B3E1-8BABFFF1F247}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.LuceneSearch.Tests", "SiteSearch.Searchable.LuceneSearch.Tests\SiteSearch.LuceneSearch.Tests.csproj", "{2564CD20-BD32-473F-B2AB-BE2138B606FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.LuceneSearch.Tests", "SiteSearch.Searchable.LuceneSearch.Tests\SiteSearch.Searchable.LuceneSearch.Tests.csproj", "{2564CD20-BD32-473F-B2AB-BE2138B606FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
