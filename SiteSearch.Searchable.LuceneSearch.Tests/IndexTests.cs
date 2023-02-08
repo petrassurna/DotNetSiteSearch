@@ -16,7 +16,6 @@ namespace SiteSearch.Searchable.LuceneSearcn.Tests
     }
 
 
-
     [Test]
     public void OneDocumentCanBeAddedToIndex()
     {
