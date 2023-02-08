@@ -1,8 +1,9 @@
 using UmbracoExtensions;
 using Umbraco.Cms.Core.Notifications;
-using SiteSearch.USiteSearch.Notifications;
 
-namespace SiteSearch.USiteSearch.Umbraco10Sample
+///using USiteSearch.Notifications;
+
+namespace Umbraco10
 {
   public class Startup
   {
@@ -38,7 +39,7 @@ namespace SiteSearch.USiteSearch.Umbraco10Sample
           .AddWebsite()
           .AddComposers()
           .AddNotificationHandler<UmbracoApplicationStartingNotification, CreateBundlesNotificationHandler>()
-          .AddUSiteSearch(services, "app_data/USiteSearch", 9)
+         /// .AddUSiteSearch(services, "app_data/USiteSearch", 9)
           .Build();
     }
 
