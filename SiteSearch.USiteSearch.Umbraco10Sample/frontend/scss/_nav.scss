@@ -1,0 +1,33 @@
+@import "constants";
+
+section.menu {
+
+    @include section;
+    max-width: 100%;
+
+    nav {
+        margin: 0 auto;
+        max-width: 100%;
+        background-color: #111;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+
+        ul {
+            display: flex;
+
+            li {
+                padding-right: 25px;
+            }
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

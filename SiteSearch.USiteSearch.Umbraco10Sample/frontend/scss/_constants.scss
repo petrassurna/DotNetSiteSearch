@@ -1,0 +1,9 @@
+$site-width: 1100px;
+
+@mixin section {
+    margin: 0 auto;
+    width: $site-width;
+    max-width: 97%;
+    background-color: #111;
+}
+

@@ -1,0 +1,19 @@
+@import "constants";
+
+section
+{
+    @include section;
+    padding:20px;
+    background-color: #d3d3d3;
+
+    h1 {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    
+    p {
+        padding-bottom: 20px;
+    }
+    
+}
+
