@@ -1,7 +1,6 @@
 using UmbracoExtensions;
 using Umbraco.Cms.Core.Notifications;
-
-///using USiteSearch.Notifications;
+using SiteSearch.USiteSearch.Notifications;
 
 namespace Umbraco10
 {
@@ -39,7 +38,7 @@ namespace Umbraco10
           .AddWebsite()
           .AddComposers()
           .AddNotificationHandler<UmbracoApplicationStartingNotification, CreateBundlesNotificationHandler>()
-         /// .AddUSiteSearch(services, "app_data/USiteSearch", 9)
+          .AddUSiteSearch(services, "app_data/USiteSearch", 9)
           .Build();
     }
 

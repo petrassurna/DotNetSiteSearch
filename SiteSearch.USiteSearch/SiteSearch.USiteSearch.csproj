@@ -114,23 +114,6 @@
     </None>
   </ItemGroup>
   
-  
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat&quot; $(Version) &quot;$(SolutionDir)&quot;" />
-  </Target>
 
 </Project>
