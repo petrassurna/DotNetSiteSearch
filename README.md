@@ -27,6 +27,7 @@ site will teach you how to install it in your own site. Set up should take no lo
 
 Note: This help can also be viewed as a [YouTube tutorial](https://www.yart.com.au/blog/usitesearch/) if you prefer watching a video. 
 
+
 ### Installation steps
 
 We will install USiteSearch on an Umbraco 10 (or 11) website to show how it works.
