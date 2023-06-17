@@ -41,7 +41,7 @@ The back office login for the website is:
 
 2. Install the latest nuget USiteSearch package via the NuGet package manager:
 
-	![nuget install](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/nuget-install.jpg)
+	![nuget install](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/nuget-install.jpg)
 
 3. Unzip this zip file [site files](https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.662.zip)
 
@@ -49,7 +49,7 @@ The back office login for the website is:
 
 	 This installs some css, images, javascript and a partial view. The files it installs are show below:
 
-	 ![setup sample](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/setup-sample.jpg)
+	 ![setup sample](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/setup-sample.jpg)
 
 4. Run the project to view the sample website. Now let's add *USiteSearch*.
    Open startup.cs and add this using statement at the top of the file:
@@ -110,7 +110,7 @@ The back office login for the website is:
 7. Next we need to index the site, to do this, log into the backoffice and save and publish each of the pages.  
    This will create the lucene index under the *app_data* folder as specified in *startup.cs*:
 
-	![app_data folder](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/app-data.jpg)
+	![app_data folder](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/app-data.jpg)
 
 	This folder can be deleted to clear the search.
 
@@ -126,23 +126,23 @@ This has been done for you in *master.cshtml*:
 	Click on the element and you should see the search bar, enter the term *animals*. After typing a few characters you should 
 	see these results:
 
-	![app_data folder](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-animals.jpg)
+	![app_data folder](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/search-animals.jpg)
 
 	Refine the search, search for *animals lions*. Note the results reduce and each search term is highlighted with 9 words either
 	side of the word match. This is the variable we set earlier in *startup.cs*.
 
 9. Search for the term *play close* and notice it matches all pages: 
 
-	![Search for pay close](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-pay-close.jpg)
+	![Search for pay close](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/search-pay-close.jpg)
 
 	This is because this text is in the margin. In order to remove this text from the search, add this tag to html elements you want excluded from the site search:
 
-	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/search-exclude.jpg)
+	![Search exclusion](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/search-exclude.jpg)
 
 	Typically you would exclude the navigation, footer and common margins. You will need to save each page again to reindex these pages.
 
 10. If you want to remove whole pages from the site search, add the property *blockFromSearch* to document types:
 
-	![Search exclusion](https://raw.githubusercontent.com/petrassurna/usitesearch/main/USiteSearch/images/block-from-search.jpg)
+	![Search exclusion](https://github.com/petrassurna/DotNetSiteSearch/tree/main/SiteSearch.USiteSearch/images/block-from-search.jpg)
 
 	This is already present in the sample project and when you check it on, pages will be removed from the search if you resave them after checking the option.
