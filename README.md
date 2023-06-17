@@ -105,7 +105,7 @@ The back office login for the website is:
 6.  Add this line in *Views/master.cshtml* under the *body* tag:
 
 	```
-	@Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
+	<partial name="~/Views/Partials/USiteSearch/USiteSearch.cshtml" />
 	```
 
 7. Next we need to index the site, to do this, log into the backoffice and save and publish each of the pages.  
