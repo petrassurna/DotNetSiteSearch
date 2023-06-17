@@ -19,8 +19,10 @@ namespace SiteSearch.USiteSearch.Notifications
 
     public void Handle(ContentMovedToRecycleBinNotification notification)
     {
-      IContent content = notification.MoveInfoCollection.First().Entity;
-      Delete(content.Id);
+      foreach(var item in notification.MoveInfoCollection)
+      {
+        Delete(item.Entity.Id);
+      }
     }
   }
 }

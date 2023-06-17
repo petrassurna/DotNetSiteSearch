@@ -18,8 +18,10 @@ namespace SiteSearch.USiteSearch.Notifications
 
     public void Handle(ContentUnpublishedNotification notification)
     {
-      IContent content = notification.UnpublishedEntities.First();
-      Delete(content.Id);
+      foreach (var item in notification.UnpublishedEntities)
+      {
+        Delete(item.Id);
+      }
     }
 
   }

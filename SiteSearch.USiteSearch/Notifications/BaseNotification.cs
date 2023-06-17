@@ -11,8 +11,6 @@ namespace SiteSearch.USiteSearch.Notifications
 {
   public class BaseNotification
   {
-
-
     private readonly IHttpClientFactory _clientFactory;
     protected readonly IHttpContextAccessor _contextAccessor;
     protected readonly UmbracoHelper _umbracoHelper;

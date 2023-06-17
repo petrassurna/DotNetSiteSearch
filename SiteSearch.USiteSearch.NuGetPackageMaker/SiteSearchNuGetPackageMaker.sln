@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{94679360-9C61-46A9-AB4E-442B113A5E74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.Tests", "..\SiteSearch.Searchable.Tests\SiteSearch.Searchable.Tests.csproj", "{CDA47EE4-CF2E-429A-A76B-1C6148C85559}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable", "..\SiteSearch.Searchable\SiteSearch.Searchable.csproj", "{7EC26E90-D937-4D69-8516-5023E5039FA9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.LuceneSearch", "..\SiteSearch.Searchable.LuceneSearch\SiteSearch.Searchable.LuceneSearch.csproj", "{DAC90949-1143-4B7C-9828-9B1AFB87D253}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.LuceneSearch.Tests", "..\SiteSearch.Searchable.LuceneSearch.Tests\SiteSearch.Searchable.LuceneSearch.Tests.csproj", "{CC56E788-AACB-48F4-921C-02D44DD393DE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.TextFormatting", "..\SiteSearch.TextFormatting\SiteSearch.TextFormatting.csproj", "{D281206E-8619-45DF-8191-87D385CA686E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.TextFormatting.Tests", "..\SiteSearch.TextFormatting.Tests\SiteSearch.TextFormatting.Tests.csproj", "{C4DCC487-C37C-47A2-AF5C-027FBBB2EED8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch", "..\SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj", "{1E33CBB2-2F64-42F0-91C0-798BD0E475AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch.PostBuildActions", "..\SiteSearch.USiteSearch.PostBuildActions\SiteSearch.USiteSearch.PostBuildActions.csproj", "{418E00F6-4691-4086-976B-501F5E22662A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.USiteSearch.Umbraco10Sample", "..\SiteSearch.USiteSearch.Umbraco10Sample\SiteSearch.USiteSearch.Umbraco10Sample.csproj", "{505BB334-718F-45F0-BD0C-2BA5AD6EC79F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDA47EE4-CF2E-429A-A76B-1C6148C85559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDA47EE4-CF2E-429A-A76B-1C6148C85559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDA47EE4-CF2E-429A-A76B-1C6148C85559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDA47EE4-CF2E-429A-A76B-1C6148C85559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EC26E90-D937-4D69-8516-5023E5039FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EC26E90-D937-4D69-8516-5023E5039FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EC26E90-D937-4D69-8516-5023E5039FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EC26E90-D937-4D69-8516-5023E5039FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC90949-1143-4B7C-9828-9B1AFB87D253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC90949-1143-4B7C-9828-9B1AFB87D253}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC90949-1143-4B7C-9828-9B1AFB87D253}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC90949-1143-4B7C-9828-9B1AFB87D253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC56E788-AACB-48F4-921C-02D44DD393DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC56E788-AACB-48F4-921C-02D44DD393DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC56E788-AACB-48F4-921C-02D44DD393DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC56E788-AACB-48F4-921C-02D44DD393DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D281206E-8619-45DF-8191-87D385CA686E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D281206E-8619-45DF-8191-87D385CA686E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D281206E-8619-45DF-8191-87D385CA686E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D281206E-8619-45DF-8191-87D385CA686E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DCC487-C37C-47A2-AF5C-027FBBB2EED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DCC487-C37C-47A2-AF5C-027FBBB2EED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DCC487-C37C-47A2-AF5C-027FBBB2EED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DCC487-C37C-47A2-AF5C-027FBBB2EED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E33CBB2-2F64-42F0-91C0-798BD0E475AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E33CBB2-2F64-42F0-91C0-798BD0E475AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E33CBB2-2F64-42F0-91C0-798BD0E475AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E33CBB2-2F64-42F0-91C0-798BD0E475AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{418E00F6-4691-4086-976B-501F5E22662A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{418E00F6-4691-4086-976B-501F5E22662A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{418E00F6-4691-4086-976B-501F5E22662A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{418E00F6-4691-4086-976B-501F5E22662A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505BB334-718F-45F0-BD0C-2BA5AD6EC79F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505BB334-718F-45F0-BD0C-2BA5AD6EC79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505BB334-718F-45F0-BD0C-2BA5AD6EC79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505BB334-718F-45F0-BD0C-2BA5AD6EC79F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B61DCFB4-84DF-4CE6-B382-9ABA5A16361C}
+	EndGlobalSection
+EndGlobal

@@ -19,8 +19,10 @@ namespace SiteSearch.USiteSearch.Notifications
 
     public void Handle(ContentPublishedNotification notification)
     {
-      IContent content = notification.PublishedEntities.First();
-      AddPageIfNotBlocked(content);
+      foreach (var content in notification.PublishedEntities)
+      {
+        AddPageIfNotBlocked(content);
+      }
     }
 
   }

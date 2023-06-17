@@ -19,10 +19,12 @@ namespace SiteSearch.USiteSearch.Notifications
 
     public void Handle(ContentMovedNotification notification)
     {
-      int id = notification.MoveInfoCollection.First().Entity.Id;
-
-      IPublishedContent publishedContent = _umbracoHelper.Content(id);
-      AddPageIfNotBlocked(publishedContent);
+      foreach(var item in notification.MoveInfoCollection)
+      {
+        IPublishedContent publishedContent = _umbracoHelper.Content(item.Entity.Id);
+        AddPageIfNotBlocked(publishedContent);
+      }
     }
+
   }
 }

@@ -5,10 +5,11 @@ set solutionDir=%solutionDir:"=%
 echo %solutionDir%
 echo on
 
-del "%solutionDir%SiteSearch.USiteSearch.nuget\nuget\USiteSearchProjectFiles-%version%.zip"
+del "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip"
 
-"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "%solutionDir%\USiteSearch\Umbraco10\wwwroot\" 
-"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "%solutionDir%\USiteSearch\Umbraco10\Views\"
+
+"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "%solutionDir%\SiteSearch.USiteSearch.Umbraco10Sample\wwwroot\" 
+"%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" a     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" "%solutionDir%\SiteSearch.USiteSearch.Umbraco10Sample\Views\"
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" wwwroot\creativesuite
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" wwwroot\simplesite
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" wwwroot\dotnetsearch
@@ -25,4 +26,4 @@ del "%solutionDir%SiteSearch.USiteSearch.nuget\nuget\USiteSearchProjectFiles-%ve
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" Views\U11SampleSiteMaster.cshtml
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" Views\U11SampleSitePage.cshtml
 
-"%solutionDir%SiteSearch.USiteSearch.PostBuildActions\bin\Debug\net6.0\PostBuildActions.exe" %version%
+"%solutionDir%SiteSearch.USiteSearch.PostBuildActions\bin\Debug\net6.0\SiteSearch.USiteSearch.PostBuildActions.exe" %version%

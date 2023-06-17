@@ -31,11 +31,7 @@
   </PropertyGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y" />
-  </Target>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory ..\nuget -Force" />
+    <Exec Command="xcopy &quot;$(ProjectDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\css\styles.min.css&quot; &quot;$(ProjectDir)wwwroot\simplesite\css\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\images\*.*&quot; &quot;$(ProjectDir)wwwroot\simplesite\images\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\images\spinner.gif&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\spinner.gif*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\images\icon-close.svg&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\images\icon-close.svg*&quot; /E /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\scripts\*.*&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\scripts\&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)SiteSearch.USiteSearch.Umbraco10Sample.FrontEnd\css\usitesearch.min.css&quot; &quot;$(ProjectDir)wwwroot\USiteSearch\css\usitesearch.min.css*&quot; /E /Y" />
   </Target>
 
 </Project>

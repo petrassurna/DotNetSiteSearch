@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>USiteSearch</Title>
-    <Version>0.653</Version>
+    <Version>0.66</Version>
     <Authors>Petras Surna</Authors>
     <Company>Yart</Company>
     <Description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</Description>
@@ -18,7 +18,7 @@
     <PackageProjectUrl>https://github.com/petrassurna/USiteSearch</PackageProjectUrl>
     <PackageIcon>umbraco-site-search.jpeg</PackageIcon>
     <RepositoryUrl>https://github.com/petrassurna/USiteSearch</RepositoryUrl>
-    <PackageReleaseNotes>This is the first useable version of USiteSearch</PackageReleaseNotes>
+    <PackageReleaseNotes>This is version of USiteSearch fixes a bug when publishing with descendants</PackageReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
