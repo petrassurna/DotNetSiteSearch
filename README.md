@@ -60,7 +60,7 @@ The back office login for the website is:
 	using UmbracoExtensions;
 
 	//add this line
-	using USiteSearch.Notifications;
+	using SiteSearch.USiteSearch.Notifications;
 	```
 
 	Add *AddUSiteSearch* to *ConfigureServices*:
