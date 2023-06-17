@@ -3,13 +3,13 @@
 
 1. In SiteSearch.USiteSearch 
 
-   - Change project properties in Package > General > Package Version to the latest version e.g. 0.661
+   - Change project properties in Package > General > Package Version to the latest version e.g. 0.662
    - Change the following in USiteSearch.nuspec file 
-      <releaseNotes>0.661 - readme updates</releaseNotes>
+      <releaseNotes>0.662 - readme updates</releaseNotes>
 
 2. In SiteSearch.USiteSearch.PostBuildActions Post-build event change the following to the right version
 
-     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.661
+     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.662
 
 3. Build the SiteSearch.USiteSearch.PostBuildActions project
 
