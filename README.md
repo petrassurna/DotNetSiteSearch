@@ -44,7 +44,7 @@ The back office login for the website is:
 
 	![nuget install](https://raw.githubusercontent.com/petrassurna/usitesearch/main/SiteSearch.USiteSearch/images/nuget-install.jpg)
 
-3. Unzip this zip file [site files](https://github.com/petrassurna/usitesearch/raw/main/nuget/USiteSearchProjectFiles-0.662.zip)
+3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.662.zip)
 
    Unzip the files in the *project folder*.
 
