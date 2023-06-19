@@ -87,6 +87,7 @@
   
 
   <ItemGroup>
+    <ProjectReference Include="..\SiteSearch.PDFToText\SiteSearch.PDFToText.csproj" />
     <ProjectReference Include="..\SiteSearch.Searchable.LuceneSearch\SiteSearch.Searchable.LuceneSearch.csproj" />
     <ProjectReference Include="..\SiteSearch.Searchable\SiteSearch.Searchable.csproj" />
   </ItemGroup>

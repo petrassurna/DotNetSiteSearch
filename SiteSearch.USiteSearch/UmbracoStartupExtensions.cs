@@ -1,12 +1,14 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Searchable;
 using SiteSearch.Searchable.LuceneSearch;
+using SiteSearch.USiteSearch.Notifications.Content;
+using SiteSearch.USiteSearch.Notifications.media;
 using Umbraco.Cms.Core.DependencyInjection;
 using Umbraco.Cms.Core.Notifications;
 
 namespace SiteSearch.USiteSearch.Notifications
 {
-  public static class UmbracoStartupExtensions
+    public static class UmbracoStartupExtensions
   {
     public static IUmbracoBuilder AddUSiteSearch(this IUmbracoBuilder builder, IServiceCollection services, string path, int wordsEachSide)
     {
@@ -14,6 +16,8 @@ namespace SiteSearch.USiteSearch.Notifications
       builder.AddNotificationHandler<ContentUnpublishedNotification, UnpublishedNotification>();
       builder.AddNotificationHandler<ContentMovedToRecycleBinNotification, RecycleBinNotification>();
       builder.AddNotificationHandler<ContentMovedNotification, MovedNotification>();
+
+      builder.AddNotificationHandler<MediaSavedNotification, SavedNotification>();
 
       services.AddHttpClient();
       services.AddSingleton(typeof(ISearchProvider), new LuceneProvider(path, wordsEachSide));
