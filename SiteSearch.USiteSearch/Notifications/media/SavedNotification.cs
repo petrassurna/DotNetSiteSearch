@@ -1,24 +1,17 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Searchable;
 using SiteSearch.USiteSearch.Notifications.Content;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Umbraco.Cms.Core.Events;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Notifications;
 using Umbraco.Cms.Web.Common;
-using static Umbraco.Cms.Core.Constants.Conventions;
-using Umbraco.Cms.Web.Common.UmbracoContext;
 using Umbraco.Cms.Core.Services;
-using System.Security.Policy;
 using SiteSearch.PDFToText;
+using SiteSearch.Searchable.SearchableContent.Factories;
 
-namespace SiteSearch.USiteSearch.Notifications.media
+namespace SiteSearch.USiteSearch.Notifications.Media
 {
-  public class SavedNotification : BaseNotification, INotificationHandler<MediaSavedNotification>
+  public class SavedNotification : MediaBaseNotification, INotificationHandler<MediaSavedNotification>
   {
     IMediaService _mediaService;
 
@@ -30,13 +23,6 @@ namespace SiteSearch.USiteSearch.Notifications.media
       _mediaService = mediaService;
     }
 
-    public void Handle(MediaSavedNotification notification)
-    {
-      foreach (var content in notification.SavedEntities)
-      {
-        AddMediaIfNotBlocked(content);
-      }
-    }
 
     private void AddMediaIfNotBlocked(IMedia content)
     {
@@ -46,26 +32,46 @@ namespace SiteSearch.USiteSearch.Notifications.media
       if (media.Properties.Any(p => p.Alias == umbracoFile))
       {
         string path = media.Properties.Single(p => p.Alias == umbracoFile).GetValue().ToString();
-        string mediaUrl = $"{_contextAccessor.HttpContext.Request.Scheme}://{_contextAccessor.HttpContext.Request.Host}{path}";
+        string mediaUrl = $"{_ContextAccessor.HttpContext.Request.Scheme}://{_ContextAccessor.HttpContext.Request.Host}{path}";
+        string text = GetTextFromPDFFile(new Uri(mediaUrl), _ClientFactory);
+        string title = content.Name;
 
-        if (Path.GetExtension(mediaUrl).ToLower() == ".pdf")
+        Searchable.SearchableContent.Content webPage = ContentFactory.WebPage(content.Id.ToString(), path, title, text);
+
+        if (!webPage.IsEmpty())
         {
-          using (HttpClient httpClient = new HttpClient())
-          {
-            HttpResponseMessage response = httpClient.GetAsync(mediaUrl).Result;
-            if (response.IsSuccessStatusCode)
-            {
-              Stream pdfStream =  response.Content.ReadAsStream();
-              string text = PDFTextExtractor.PDFToText(pdfStream);
-            }
-            else
-            {
-              throw new Exception("Failed to retrieve PDF: " + response.StatusCode);
-            }
-          }
+          _Provider.AddOrUpdate(webPage);
         }
       }
     }
+
+
+    public static string GetTextFromPDFFile(Uri uri, IHttpClientFactory clientFactory)
+    {
+      string text = "";
+
+      var request = new HttpRequestMessage(HttpMethod.Get, uri);
+      var client = clientFactory.CreateClient();
+      var response = client.Send(request);
+
+      if (response.IsSuccessStatusCode)
+      {
+        using var responseStream = response.Content.ReadAsStream();
+        Stream file = response.Content.ReadAsStream();
+        text = PDFTextExtractor.PDFToText(file);
+      }
+
+      return text;
+    }
+
+    public void Handle(MediaSavedNotification notification)
+    {
+      foreach (var content in notification.SavedEntities)
+      {
+        AddMediaIfNotBlocked(content);
+      }
+    }
+
   }
 }
 
