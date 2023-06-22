@@ -8,6 +8,7 @@ namespace SiteSearch.Searchable.WebPages.Factories
   {
     public const string ROOT_PAGE = "RootPagePathString";
 
+
     private static async Task<string> GetHtml(Uri uri, IHttpClientFactory clientFactory)
     {
       string html = string.Empty;
@@ -19,7 +20,6 @@ namespace SiteSearch.Searchable.WebPages.Factories
       if (response.IsSuccessStatusCode)
       {
         using var responseStream = await response.Content.ReadAsStreamAsync();
-
         var responseValue = string.Empty;
 
         Task task = response.Content.ReadAsStreamAsync().ContinueWith(t =>

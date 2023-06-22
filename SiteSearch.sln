@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.Lucen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Searchable.LuceneSearch.Tests", "SiteSearch.Searchable.LuceneSearch.Tests\SiteSearch.Searchable.LuceneSearch.Tests.csproj", "{2564CD20-BD32-473F-B2AB-BE2138B606FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteSearch.PDFToText", "SiteSearch.PDFToText\SiteSearch.PDFToText.csproj", "{587759A5-98F7-47B4-B112-83E05D39501C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.PDFToText", "SiteSearch.PDFToText\SiteSearch.PDFToText.csproj", "{587759A5-98F7-47B4-B112-83E05D39501C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteSearch.PDFToText.Tests", "SiteSearch.PDFToText.Tests\SiteSearch.PDFToText.Tests.csproj", "{1BC35940-2B85-45D4-B260-15F47FBBA773}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.PDFToText.Tests", "SiteSearch.PDFToText.Tests\SiteSearch.PDFToText.Tests.csproj", "{1BC35940-2B85-45D4-B260-15F47FBBA773}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Security", "SiteSearch.Security\SiteSearch.Security.csproj", "{FCAEE9C5-2F14-4358-AA01-B1C8507D0682}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiteSearch.Security.Tests", "SiteSearch.Security.Tests\SiteSearch.Security.Tests.csproj", "{86F2D9CF-DF4B-4981-A920-531C3C29E25F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,14 @@ Global
 		{1BC35940-2B85-45D4-B260-15F47FBBA773}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC35940-2B85-45D4-B260-15F47FBBA773}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BC35940-2B85-45D4-B260-15F47FBBA773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCAEE9C5-2F14-4358-AA01-B1C8507D0682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCAEE9C5-2F14-4358-AA01-B1C8507D0682}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCAEE9C5-2F14-4358-AA01-B1C8507D0682}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCAEE9C5-2F14-4358-AA01-B1C8507D0682}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86F2D9CF-DF4B-4981-A920-531C3C29E25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F2D9CF-DF4B-4981-A920-531C3C29E25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86F2D9CF-DF4B-4981-A920-531C3C29E25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86F2D9CF-DF4B-4981-A920-531C3C29E25F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

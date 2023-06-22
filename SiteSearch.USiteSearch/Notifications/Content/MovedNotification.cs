@@ -8,23 +8,24 @@ using Umbraco.Cms.Web.Common;
 
 namespace SiteSearch.USiteSearch.Notifications.Content
 {
-    public class MovedNotification : BaseNotification, INotificationHandler<ContentMovedNotification>
+  public class MovedNotification : BaseNotification, INotificationHandler<ContentMovedNotification>
+  {
+
+    public MovedNotification(IHttpContextAccessor contextAccessor,
+      UmbracoHelper umbracoHelper, ISearchProvider indexer, 
+      IHttpClientFactory clientFactory)
+      : base(contextAccessor, umbracoHelper, indexer, clientFactory)
     {
-
-        public MovedNotification(IHttpContextAccessor contextAccessor,
-          UmbracoHelper umbracoHelper, ISearchProvider indexer, IHttpClientFactory clientFactory)
-          : base(contextAccessor, umbracoHelper, indexer, clientFactory)
-        {
-        }
-
-        public void Handle(ContentMovedNotification notification)
-        {
-            foreach (var item in notification.MoveInfoCollection)
-            {
-                IPublishedContent publishedContent = _umbracoHelper.Content(item.Entity.Id);
-                AddPageIfNotBlocked(publishedContent);
-            }
-        }
-
     }
+
+    public void Handle(ContentMovedNotification notification)
+    {
+      foreach (var item in notification.MoveInfoCollection)
+      {
+        IPublishedContent publishedContent = _UmbracoHelper.Content(item.Entity.Id);
+        AddPageIfNotBlocked(publishedContent);
+      }
+    }
+
+  }
 }
