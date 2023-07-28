@@ -5,7 +5,7 @@
 
    - Change project properties in Package > General > Package Version to the latest version e.g. 0.662
    - Change the following in USiteSearch.nuspec file 
-      <releaseNotes>0.662 - readme updates</releaseNotes>
+      <releaseNotes>0.664 - readme updates</releaseNotes>
 
   Note: Keep the version in this form 0.664, not 0.66.4 which NuGet doesn't seem to like
 
