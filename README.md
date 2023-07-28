@@ -31,13 +31,13 @@ Note: This help can also be viewed as a [YouTube tutorial](https://www.yart.com.
 
 We will install USiteSearch on an Umbraco 10 (or 11) website to show how it works.
 
-1. Clone this basic [Umbraco 12 website](https://github.com/petrassurna/umbraco12samplesite.git). The website comes with an embedded database so it should run without further modifications. 
+1. Clone this basic [Umbraco 11 website](https://github.com/petrassurna/umbraco11samplesite.git). The website comes with an embedded database so it should run without further modifications. 
 The back office login for the website is:
 
 	Username: admin@admin.com  
 	Password: admin12345
 
-	Alternatively clone the same website in [Umbraco 11 website](https://github.com/petrassurna/umbraco11samplesite.git) or the same website in [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git) if you are using Umbraco 10. 
+	Alternatively clone the same website in [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git) 
 	
 	Check the website runs and you can log in to the backoffice.
 
@@ -58,11 +58,8 @@ The back office login for the website is:
    Open startup.cs and add this using statement at the top of the file:
 
 	```
-	using Umbraco.Cms.Core.Notifications;
-	using UmbracoExtensions;
-
 	//add this line
-	using USiteSearch.Notifications;
+  using SiteSearch.USiteSearch.Notifications;
 	```
 
 	Add *AddUSiteSearch* to *ConfigureServices*:
