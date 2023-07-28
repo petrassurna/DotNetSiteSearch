@@ -5,14 +5,14 @@
 
    - Change project properties in Package > General > Package Version to the latest version e.g. 0.662
    - Change the following in USiteSearch.nuspec file 
-      <releaseNotes>0.665 - readme updates</releaseNotes>
+      <releaseNotes>0.666 - readme updates</releaseNotes>
       check copyright notice up to date in this file as well
 
-  Note: Keep the version in this form 0.665, not 0.66.5 which NuGet doesn't seem to like
+  Note: Keep the version in this form 0.666, not 0.66.6 which NuGet doesn't seem to like
 
 2. In SiteSearch.USiteSearch.PostBuildActions Post-build event change the following to the right version
 
-     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.665
+     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.666
 
 3. Build the SiteSearch.USiteSearch.PostBuildActions project
 
