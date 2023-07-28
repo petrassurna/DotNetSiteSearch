@@ -58,10 +58,11 @@ The back office login for the website is:
    Open startup.cs and add this using statement at the top of the file:
 
 	```
-	
-	//add this line
-  using SiteSearch.USiteSearch.Notifications;
+	using Umbraco.Cms.Core.Notifications;
+	using UmbracoExtensions;
 
+	//add this line
+	using USiteSearch.Notifications;
 	```
 
 	Add *AddUSiteSearch* to *ConfigureServices*:
