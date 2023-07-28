@@ -4,7 +4,6 @@ using SiteSearch.USiteSearch.Notifications.Content;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Web.Common;
 using Umbraco.Cms.Core.Services;
-using SiteSearch.PDFToText;
 using SiteSearch.Searchable.SearchableContent.Factories;
 
 namespace SiteSearch.USiteSearch.Notifications.Media
@@ -63,7 +62,7 @@ namespace SiteSearch.USiteSearch.Notifications.Media
       {
         using var responseStream = response.Content.ReadAsStream();
         Stream file = response.Content.ReadAsStream();
-        text = PDFTextExtractor.PDFToText(file);
+        //?text = PDFTextExtractor.PDFToText(file);
       }
 
       return text;

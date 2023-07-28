@@ -1,18 +1,24 @@
 ﻿How to build nuget packages
 ---------------------------
 
-1. In SiteSearch.USiteSearch 
+Instructions
+------------
 
-   - Change project properties in Package > General > Package Version to the latest version e.g. 0.662
-   - Change the following in USiteSearch.nuspec file 
-      <releaseNotes>0.666 - readme updates</releaseNotes>
-      check copyright notice up to date in this file as well
+1. Change the version in three places:
 
-  Note: Keep the version in this form 0.666, not 0.66.6 which NuGet doesn't seem to like
+   - SiteSearch.USiteSearch 
+     project properties in Package > General > Package Version
 
-2. In SiteSearch.USiteSearch.PostBuildActions Post-build event change the following to the right version
+   - USiteSearch.nuspec file 
+     <releaseNotes>0.6672 - readme updates</releaseNotes>
 
-     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.666
+   - SiteSearch.USiteSearch.PostBuildActions Post-build event 
+     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.6672
+
+3. Select all projects except PostBuildActions:
+
+   - Build a debug version
+   - Build a release version
 
 3. Build the SiteSearch.USiteSearch.PostBuildActions project
 
@@ -24,8 +30,15 @@
 
 7. Test the video
 
+
+
 Notes
 -----
+
+Rebuild SiteSearch.USiteSearch.PostBuildActions. This builds the nuget file in SiteSearch.USiteSearch
+
+Note that SiteSearch.USiteSearch does not have the checkbox 'Produce a package file during 
+build operations' checked
 
 why you cant copy file nuget files to a folder
 https://stackoverflow.com/questions/51959638/nuget-package-contentfiles-not-copied-to-net-core-project

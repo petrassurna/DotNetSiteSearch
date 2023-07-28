@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory &quot;$(SolutionDir)SiteSearch.USiteSearch.nuget&quot; -Force&#xD;&#xA;&#xD;&#xA;&quot;$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat&quot; &quot;0.666&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;&#xD;&#xA;" />
+    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory &quot;$(SolutionDir)SiteSearch.USiteSearch.nuget&quot; -Force&#xD;&#xA;&#xD;&#xA;&quot;$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat&quot; &quot;0.6672&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;" />
   </Target>
 
 </Project>

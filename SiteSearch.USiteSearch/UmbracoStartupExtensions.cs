@@ -17,9 +17,9 @@ namespace SiteSearch.USiteSearch.Notifications
       builder.AddNotificationHandler<ContentMovedToRecycleBinNotification, RecycleBinNotification>();
       builder.AddNotificationHandler<ContentMovedNotification, Content.MovedNotification>();
 
-      builder.AddNotificationHandler<MediaSavedNotification, SavedNotification>();
-      builder.AddNotificationHandler<MediaMovedToRecycleBinNotification, MediaRecycleBinNotification>();
-      builder.AddNotificationHandler<MediaMovedNotification, Media.MovedNotification>();
+      //builder.AddNotificationHandler<MediaSavedNotification, SavedNotification>();
+      //builder.AddNotificationHandler<MediaMovedToRecycleBinNotification, MediaRecycleBinNotification>();
+      //builder.AddNotificationHandler<MediaMovedNotification, Media.MovedNotification>();
 
       services.AddHttpClient();
       services.AddSingleton(typeof(ISearchProvider), new LuceneProvider(path, wordsEachSide));

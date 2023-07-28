@@ -3,6 +3,8 @@ using Searchable;
 using SiteSearch.Searchable.SearchableContent.Factories;
 using SiteSearch.Searchable.WebPages.Factories;
 using System;
+using System.Net;
+using System.Net.Http;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Web.Common;
@@ -57,10 +59,14 @@ namespace SiteSearch.USiteSearch.Notifications.Content
 
       if(this._Provider.Count() == 1)
       {
+        using var cts = new CancellationTokenSource();
+        cts.CancelAfter(TimeSpan.FromMilliseconds(300));
+
         var request = new HttpRequestMessage(HttpMethod.Get, uri);
         var client = _ClientFactory.CreateClient();
         var response =  client.Send(request);
       }
+
     }
 
     protected void Delete(int contentId)

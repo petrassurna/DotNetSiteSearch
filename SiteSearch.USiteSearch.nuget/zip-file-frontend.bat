@@ -26,4 +26,4 @@ del "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" Views\U11SampleSiteMaster.cshtml
 "%solutionDir%\SiteSearch.USiteSearch.nuget\7z.exe" d     "%solutionDir%SiteSearch.USiteSearch.nuget\USiteSearchProjectFiles-%version%.zip" Views\U11SampleSitePage.cshtml
 
-"%solutionDir%SiteSearch.USiteSearch.PostBuildActions\bin\Debug\net6.0\SiteSearch.USiteSearch.PostBuildActions.exe" %version%
+"%solutionDir%SiteSearch.USiteSearch.PostBuildActions\bin\release\net6.0\SiteSearch.USiteSearch.PostBuildActions.exe" %version%

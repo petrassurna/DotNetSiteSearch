@@ -1,24 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Title>USiteSearch</Title>
-    <Version>0.666</Version>
+    <Version>0.6672</Version>
     <Authors>Petras Surna</Authors>
     <Company>Yart</Company>
     <Description>Add Google-like full text site search to your Umbraco site in 15 minutes flat</Description>
     <PackageTags>Umbraco,website,search</PackageTags>
     <PackageId>USiteSearch</PackageId>
-    <PackageOutputPath>($SolutionDir)SiteSearch.USiteSearch.nuget\nuget</PackageOutputPath>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageOutputPath>.\</PackageOutputPath>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	<IncludeContentInPack>true</IncludeContentInPack>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Copyright>Copyright Yart 2023</Copyright>
     <PackageProjectUrl>https://github.com/petrassurna/USiteSearch</PackageProjectUrl>
-    <PackageIcon>umbraco-site-search.jpeg</PackageIcon>
-    <RepositoryUrl>https://github.com/petrassurna/USiteSearch</RepositoryUrl>
+    <PackageIcon>images/umbraco-site-search.jpeg</PackageIcon>
+    <RepositoryUrl>https://github.com/petrassurna/DotNetSiteSearch</RepositoryUrl>
     <PackageReleaseNotes>This is version of USiteSearch fixes a bug when publishing with descendants</PackageReleaseNotes>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <PackAsTool>False</PackAsTool>
+    <IsPublishable>False</IsPublishable>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -33,8 +37,6 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DefineConstants>$(DefineConstants)TRACE</DefineConstants>
-
-
 	
 	<DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
@@ -48,26 +50,8 @@
 
   <ItemGroup>
     <None Remove="nuget.exe" />
-  </ItemGroup>
-  
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="PdfPig" Version="0.1.8" />
     <PackageReference Include="Umbraco.Cms.Core" Version="10.3.1" />
     <PackageReference Include="Umbraco.Cms.Web.Common" Version="10.3.1" />
   </ItemGroup>
@@ -88,7 +72,6 @@
   
 
   <ItemGroup>
-    <ProjectReference Include="..\SiteSearch.PDFToText\SiteSearch.PDFToText.csproj" />
     <ProjectReference Include="..\SiteSearch.Searchable.LuceneSearch\SiteSearch.Searchable.LuceneSearch.csproj" />
     <ProjectReference Include="..\SiteSearch.Searchable\SiteSearch.Searchable.csproj" />
   </ItemGroup>
@@ -111,6 +94,10 @@
   <ItemGroup>
     <None Update="images\umbraco-site-search.jpeg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

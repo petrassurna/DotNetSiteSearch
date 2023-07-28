@@ -13,7 +13,7 @@
 		<owners>Petras Surna</owners>
 
 		<!-- Project URL provides a link for the gallery -->
-		<projectUrl>https://github.com/petrassurna/usitesearch</projectUrl>
+		<projectUrl>https://github.com/petrassurna/DotNetSiteSearch</projectUrl>
 
 		<!-- License information is displayed on the gallery -->
 		<license type="expression">AGPL-3.0-or-later</license>
@@ -29,7 +29,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 
 		<!-- Any details about this particular release -->
-		<releaseNotes>0.665 - readme updates</releaseNotes>
+		<releaseNotes>0.6672 - readme updates</releaseNotes>
 
 		<!-- 
             The description can be used in package manager UI. Note that the
@@ -45,8 +45,8 @@
 
 		<!-- Dependencies are automatically installed when the package is installed -->
 		<dependencies>
-			<dependency id="PluralizeService.Core" version="1.2.21147.2" />
-		</dependencies>
+      <dependency id="PluralizeService.Core" version="1.2.21147.2" />
+    </dependencies>
 
     <readme>docs\README.md</readme>
 
@@ -55,6 +55,6 @@
 	<files>
 		<file src=".\images\umbraco-site-search.jpeg" target="images\" />		
     <file src="..\README.md" target="docs\" />
-	</files>
+  </files>
 
 </package>
