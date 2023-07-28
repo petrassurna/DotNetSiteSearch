@@ -1,3 +1,5 @@
+This file is best viewed at [GitHub]https://github.com/petrassurna/DotNetSiteSearch
+
 ## Add full text search to your Umbraco website in 15 minutes flat
 
 I build websites using the Umbraco content management system, and one feature that is often necessary 
