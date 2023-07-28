@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory &quot;$(SolutionDir)SiteSearch.USiteSearch.nuget&quot; -Force&#xD;&#xA;&#xD;&#xA;&quot;$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat&quot; &quot;0.662&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;&#xD;&#xA;" />
+    <Exec Command="&quot;$(SolutionDir)SiteSearch.USiteSearch\nuget.exe&quot; pack &quot;$(SolutionDir)SiteSearch.USiteSearch\SiteSearch.USiteSearch.csproj&quot; -IncludeReferencedProjects -OutputDirectory &quot;$(SolutionDir)SiteSearch.USiteSearch.nuget&quot; -Force&#xD;&#xA;&#xD;&#xA;&quot;$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat&quot; &quot;0.664&quot; &quot;$(SolutionDir)&quot;&#xD;&#xA;&#xD;&#xA;" />
   </Target>
 
 </Project>
