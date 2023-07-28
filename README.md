@@ -45,7 +45,7 @@ The back office login for the website is:
 
 	![nuget install](https://github.com/petrassurna/DotNetSiteSearch/blob/main/SiteSearch.USiteSearch/images/nuget-install.jpg)
 
-3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.664.zip)
+3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.665.zip)
 
 
    Unzip the files in the *project folder*.
@@ -103,7 +103,7 @@ The back office login for the website is:
 6.  Add this line in *Views/master.cshtml* under the *body* tag:
 
 	```
-	@Html.Partial("~/Views/Partials/USiteSearch/USiteSearch.cshtml")
+	<partial name="~/Views/Partials/USiteSearch/USiteSearch.cshtml" />
 	```
 
 7. Next we need to index the site, to do this, log into the backoffice and save and publish each of the pages.  

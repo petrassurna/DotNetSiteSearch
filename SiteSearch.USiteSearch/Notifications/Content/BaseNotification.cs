@@ -2,6 +2,7 @@
 using Searchable;
 using SiteSearch.Searchable.SearchableContent.Factories;
 using SiteSearch.Searchable.WebPages.Factories;
+using System;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Web.Common;
@@ -41,6 +42,7 @@ namespace SiteSearch.USiteSearch.Notifications.Content
         if (!webPage.IsEmpty())
         {
           _Provider.AddOrUpdate(webPage);
+          Register();
         }
       }
       else
@@ -49,6 +51,17 @@ namespace SiteSearch.USiteSearch.Notifications.Content
       }
     }
 
+    private void Register()
+    {
+      Uri uri = new Uri("https://www.yart.com.au/usiterego/"); 
+
+      if(this._Provider.Count() == 1)
+      {
+        var request = new HttpRequestMessage(HttpMethod.Get, uri);
+        var client = _ClientFactory.CreateClient();
+        var response =  client.Send(request);
+      }
+    }
 
     protected void Delete(int contentId)
     {

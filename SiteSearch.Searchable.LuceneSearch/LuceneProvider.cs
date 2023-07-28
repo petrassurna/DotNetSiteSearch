@@ -88,6 +88,8 @@ namespace SiteSearch.Searchable.LuceneSearch
 
     public void CleanUp() => DeleteIndex();
 
+    public int Count() => _luceneIndexWriter.GetReader(false).NumDocs;
+
     public void Delete(Content content) => _postIndexer.Delete(content.Field(ContentFactory.ID));
 
     public void DeleteIndex() => _luceneIndexWriter.DeleteIndex();
@@ -136,6 +138,7 @@ namespace SiteSearch.Searchable.LuceneSearch
     }
 
     public void Update(Content content) => _postIndexer.Update(content);
+
 
   }
 }

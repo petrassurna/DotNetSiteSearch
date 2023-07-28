@@ -43,6 +43,8 @@ namespace Searchable
 
     void CleanUp();
 
+    int Count();
+
     void Delete(Content content);
 
     bool KeyExists(ContentField field);
