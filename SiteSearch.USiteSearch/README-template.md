@@ -54,7 +54,7 @@ The back office login for the website is:
 3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-VERSION.zip) 
    if using Umbraco 11.
 
-	 Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-662.zip) 
+	 Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/blob/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.662.zip) 
    if using Umbraco 10.
 
    Unzip the files in the *project folder*.
