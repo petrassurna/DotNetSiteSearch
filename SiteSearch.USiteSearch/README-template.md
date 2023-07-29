@@ -39,11 +39,13 @@ The back office login for the website is:
 	Username: admin@admin.com  
 	Password: admin12345
 
-	Alternatively clone the same website in [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git) 
+	Alternatively clone the same website in [Umbraco 12 website](https://github.com/petrassurna/umbraco12samplesite.git) 
+
+	or clone the same website in [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git) 
 	
 	Check the website runs and you can log in to the backoffice.
 
-2. If using Umbraco 11, install the latest nuget USiteSearch package via the NuGet package manager:
+2. If using Umbraco 11 or 12, install the latest nuget USiteSearch package via the NuGet package manager:
 
 	![nuget install](https://github.com/petrassurna/DotNetSiteSearch/blob/main/SiteSearch.USiteSearch/images/nuget-install.jpg)
 

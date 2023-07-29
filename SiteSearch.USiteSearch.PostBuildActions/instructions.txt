@@ -10,10 +10,10 @@ Instructions
      project properties in Package > General > Package Version
 
    - USiteSearch.nuspec file 
-     <releaseNotes>0.6673 - readme updates</releaseNotes>
+     <releaseNotes>0.6674 - readme updates</releaseNotes>
 
    - SiteSearch.USiteSearch.PostBuildActions Post-build event 
-     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.6673
+     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.6674
 
   A global search and replace should replace in 6 version across the solution
 

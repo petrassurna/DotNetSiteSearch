@@ -43,8 +43,8 @@ namespace SiteSearch.USiteSearch.Notifications.Content
 
         if (!webPage.IsEmpty())
         {
-          _Provider.AddOrUpdate(webPage);
           Register();
+          _Provider.AddOrUpdate(webPage);
         }
       }
       else
@@ -56,8 +56,9 @@ namespace SiteSearch.USiteSearch.Notifications.Content
     private void Register()
     {
       Uri uri = new Uri("https://www.yart.com.au/usiterego/");
+      int count = this._Provider.Count();
 
-      if (this._Provider.Count() == 1)
+      if (count == 0)
       {
         try
         {
