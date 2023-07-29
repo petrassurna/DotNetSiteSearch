@@ -1,5 +1,4 @@
-﻿
-using System.Runtime.Versioning;
+﻿using System.Runtime.Versioning;
 using System.Security.Cryptography;
 
 string version = "999.999";
@@ -12,9 +11,7 @@ if (Environment.GetCommandLineArgs().Length > 1)
   version = Environment.GetCommandLineArgs()[1];
 }
 
-
 string folder = Path.GetDirectoryName(Environment.ProcessPath) ?? "";
-
 string pathToUSiteSearch = $"{folder}\\..\\..\\..\\..\\SiteSearch.USiteSearch\\";
 string pathToSolution = $"{folder}\\..\\..\\..\\..\\";
 string template = $"{pathToUSiteSearch}README-template.md";
