@@ -65,7 +65,7 @@ The back office login for the website is:
    Open startup.cs and add this using statement at the top of the file:
 
 	 ```
-	 using USiteSearch.Notifications;
+	 using SiteSearch.USiteSearch.Notifications;
 	 ```
 
 	Add *AddUSiteSearch* to *ConfigureServices*:
