@@ -1,4 +1,4 @@
-This file is best viewed at [GitHub]https://github.com/petrassurna/DotNetSiteSearch
+This file is best viewed at [GitHub]https://github.com/petrassurna/DotNetSiteSearch. Image are blocked when viewed on NuGet.
 
 ## Add full text search to your Umbraco website in 15 minutes flat
 

@@ -55,16 +55,18 @@ namespace SiteSearch.USiteSearch.Notifications.Content
 
     private void Register()
     {
-      Uri uri = new Uri("https://www.yart.com.au/usiterego/"); 
+      Uri uri = new Uri("https://www.yart.com.au/usiterego/");
 
-      if(this._Provider.Count() == 1)
+      if (this._Provider.Count() == 1)
       {
-        using var cts = new CancellationTokenSource();
-        cts.CancelAfter(TimeSpan.FromMilliseconds(300));
-
-        var request = new HttpRequestMessage(HttpMethod.Get, uri);
-        var client = _ClientFactory.CreateClient();
-        var response =  client.Send(request);
+        try
+        {
+          HttpClient client = new HttpClient();
+          using HttpResponseMessage response = client.GetAsync(uri).Result;
+        }
+        catch (HttpRequestException e)
+        {
+        }
       }
 
     }

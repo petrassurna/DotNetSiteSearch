@@ -49,7 +49,7 @@ The back office login for the website is:
 
 	If using Umbraco 10, install package 0.662
 
-3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.6672.zip) 
+3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.6673.zip) 
    if using Umbraco 11.
 
 	 Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-662.zip) 
