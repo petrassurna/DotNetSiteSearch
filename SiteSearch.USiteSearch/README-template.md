@@ -31,7 +31,7 @@ Note: This help can also be viewed as a [YouTube tutorial](https://www.yart.com.
 
 ### Installation steps
 
-We will install USiteSearch on an Umbraco 11 website to show how it works.
+We will install USiteSearch on an Umbraco 11 or 12 website to show how it works.
 
 1. Clone this basic [Umbraco 11 website](https://github.com/petrassurna/umbraco11samplesite.git). The website comes with an embedded database so it should run without further modifications. 
 The back office login for the website is:
@@ -41,21 +41,13 @@ The back office login for the website is:
 
 	Alternatively clone the same website in [Umbraco 12 website](https://github.com/petrassurna/umbraco12samplesite.git) 
 
-	or clone the same website in [Umbraco 10 website](https://github.com/petrassurna/umbraco10samplesite.git) 
-	
 	Check the website runs and you can log in to the backoffice.
 
-2. If using Umbraco 11 or 12, install the latest nuget USiteSearch package via the NuGet package manager:
+2. Install the latest nuget USiteSearch package via the NuGet package manager:
 
 	![nuget install](https://github.com/petrassurna/DotNetSiteSearch/blob/main/SiteSearch.USiteSearch/images/nuget-install.jpg)
 
-	If using Umbraco 10, install package 0.662
-
-3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-VERSION.zip) 
-   if using Umbraco 11.
-
-	 Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-0.662.zip) 
-   if using Umbraco 10.
+3. Unzip this zip file [site files](https://github.com/petrassurna/DotNetSiteSearch/raw/main/SiteSearch.USiteSearch.nuget/USiteSearchProjectFiles-VERSION.zip)
 
    Unzip the files in the *project folder*.
 
