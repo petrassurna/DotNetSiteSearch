@@ -15,7 +15,8 @@ namespace SiteSearch.Searchable.SearchResults.Factories
         return match;
       }
 
-      string[] contents = content.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+      string[] contents = content.Split((char[])null!, StringSplitOptions.RemoveEmptyEntries);
+
       int index = Index(contents, word, stemmer);
 
       if (index != -1)

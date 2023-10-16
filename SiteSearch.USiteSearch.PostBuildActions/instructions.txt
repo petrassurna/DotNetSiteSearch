@@ -10,12 +10,10 @@ Instructions
      project properties in Package > General > Package Version
 
    - USiteSearch.nuspec file 
-     <releaseNotes>0.6674 - readme updates</releaseNotes>
+     <releaseNotes>0.6675 - readme updates</releaseNotes>
 
    - SiteSearch.USiteSearch.PostBuildActions Post-build event 
-     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.6674
-
-  A global search and replace should replace in 6 version across the solution
+     "$(SolutionDir)SiteSearch.USiteSearch.nuget\zip-file-frontend.bat" 0.6675
 
 3. Select all projects except PostBuildActions:
 
@@ -26,11 +24,13 @@ Instructions
 
 4. Add the generated zip files in SiteSearch.USiteSearch.nuget to git
 
-5. Commit and push.
+5. Commit and push
 
-6. Upload the nuget package to https://www.nuget.org/
+6. Test the package locally against the video
 
-7. Test the video
+7. Upload the nuget package to https://www.nuget.org/
+
+8. Test the video
 
 
 

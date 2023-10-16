@@ -17,7 +17,8 @@ namespace SiteSearch.TextFormatting
       if (string.IsNullOrWhiteSpace(str))
         return "";
 
-      str = Regex.Replace(str, @"[^\u0000-\u007F]+", string.Empty);
+      //strips foreign language characters
+      //str = Regex.Replace(str, @"[^\u0000-\u007F]+", string.Empty);
 
       str = str.Replace("\r", "");
       str = str.Replace("\n", " ");

@@ -30,9 +30,7 @@ namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
       _writer.AddDocument(doc);
     }
 
-
     public abstract void Commit();
-
 
     internal void DeleteDocuments(Term term)
     {
@@ -49,9 +47,7 @@ namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
       return _writer.GetReader(applyAllDeletes: applyAllDeletes); //creates a lock
     }
 
-
     internal abstract void Unlock();
-
 
     internal void UpdateDocument(Content content, Document doc)
     {

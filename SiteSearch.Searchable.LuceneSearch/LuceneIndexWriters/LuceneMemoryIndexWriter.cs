@@ -2,7 +2,6 @@
 using Lucene.Net.Index;
 using Lucene.Net.Store;
 using Lucene.Net.Util;
-using System.IO;
 
 namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
 {
@@ -18,23 +17,11 @@ namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
       Unlock();
     }
 
-
-    private void DeleteFiles()
-    {
-    }
-
-
     public override void DeleteIndex()
     {
-      //string directoryName = (_Directory as FSDirectory).Directory.FullName;
-
-      //if (System.IO.Directory.Exists(directoryName))
-      {
-        Unlock();
-        _writer.Dispose();
-      }
+      Unlock();
+      _writer.Dispose();
     }
-
 
     public override void Dispose()
     {
@@ -42,15 +29,9 @@ namespace SiteSearch.Searchable.LuceneSearch.LuceneIndexWriters
       _writer.Dispose();
     }
 
-
     internal override void Unlock()
     {
-     // string directoryName = (_Directory as FSDirectory).Directory.FullName;
-
-      //if (System.IO.Directory.Exists(directoryName))
-      {
-        IndexWriter.Unlock(_Directory);
-      }
+      IndexWriter.Unlock(_Directory);
     }
 
   }

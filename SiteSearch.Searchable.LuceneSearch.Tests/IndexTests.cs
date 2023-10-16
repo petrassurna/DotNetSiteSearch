@@ -1,4 +1,4 @@
-using Searchable;
+﻿using Searchable;
 using Shouldly;
 using Lucene.Net.Store;
 using SiteSearch.Searchable.SearchableContent;
@@ -186,6 +186,35 @@ namespace SiteSearch.Searchable.LuceneSearcn.Tests
       }
     }
 
+    [Test]
+    public void ForeignLanguage()
+    {
+      Content content = ContentFactory.WebPage("1", "/url", "title", "content žinios arbuzas archajiškiausia iš gyvųjų");
+
+      using (ISearchProvider provider = new LuceneProvider(new RAMDirectory()))
+      {
+        try
+        {
+          provider.Add(content);
+
+          var results = provider.Search("title", 0, 10);
+
+          results = provider.Search("žinios", 0, 10);
+          results.Count().ShouldBe(1);
+
+          results = provider.Search("archajiškiausia", 0, 10);
+          results.Count().ShouldBe(1);
+
+          provider.CleanUp();
+        }
+        finally
+        {
+          provider.CleanUp();
+        }
+      }
+
+    }
+
 
     [Test]
     public void ManyDocumentsCanBeAddedToIndex()
@@ -243,7 +272,7 @@ namespace SiteSearch.Searchable.LuceneSearcn.Tests
 
     [Test]
     public void AddOrUpdateTests2()
-    { 
+    {
       string word = "1047376276726767767d6767d00";
       Content content = ContentFactory.WebPage(word, $"/{word}", word, word);
 
